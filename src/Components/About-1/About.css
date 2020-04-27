@@ -51,4 +51,84 @@
 .about .numbers ul li span {
   display: block;
 }
+
+.numbers {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  color: #f4f4f4;
+  padding: 0 2em;
+  background-color: #028fcc;
+}
+
+.numbers ul {
+  max-width: 1200px;
+  list-style: none;
+  padding: 1.7em 0;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+}
+
+.numbers ul li {
+  margin: 1em 0;
+}
+
+.numbers ul li strong {
+  font-size: 2.5em;
+}
+
+.numbers ul li span {
+  display: block;
+}
+
+@media (min-width: 1200px) {
+  .about {
+    height: 60vh;
+    margin-top: 8em;
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: #f9f9f9;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (50%)[2];
+        grid-template-columns: repeat(2, 50%);
+  }
+  .about .about__text {
+    padding-top: 4em !important;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-bottom: 1em;
+    margin-left: 30% !important;
+  }
+  .about .about__text p {
+    text-align: left;
+  }
+  .about .about__img {
+    height: 100%;
+    background-attachment: fixed;
+    background-position: 25% 60%;
+  }
+  .numbers ul {
+    padding-left: 12em;
+  }
+  .numbers li {
+    position: relative;
+  }
+  .numbers li::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 2px;
+    border-radius: 3px;
+    right: 6em;
+    bottom: 0;
+    background-color: #ebebeb;
+  }
+  .numbers li:nth-last-child(1)::before {
+    display: none;
+  }
+}
 /*# sourceMappingURL=About.css.map */

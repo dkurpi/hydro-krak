@@ -75,4 +75,42 @@
   width: 0.5em;
   background-color: #5e5e5e;
 }
+
+@media (min-width: 800px) {
+  .realization {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .realization .realization__text {
+    padding-top: 4em;
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 4em;
+  }
+  .realization .realization__cards {
+    font-size: 15px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .realization .card {
+    color: #393939;
+    -webkit-box-shadow: 0 35px 35px -25px rgba(10, 10, 10, 0.1);
+            box-shadow: 0 35px 35px -25px rgba(10, 10, 10, 0.1);
+    margin: 1em 1em;
+  }
+  .realization .card__text {
+    padding: 0 1em 1em;
+    text-align: left;
+  }
+}
 /*# sourceMappingURL=Realizations.css.map */

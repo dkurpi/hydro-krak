@@ -89,4 +89,95 @@ h2:after {
   width: 0.5em;
   background-color: #5e5e5e;
 }
+
+@media (min-width: 800px) {
+  h2 {
+    font-size: 2em;
+    letter-spacing: .2em;
+    margin-bottom: 1.8em;
+    margin-top: 0.7em;
+  }
+  h2:after {
+    content: "";
+    position: absolute;
+    top: 1.5em;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
+    background-color: #028fcc;
+    height: 0.3em;
+    width: 5em;
+  }
+  .offer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .offer .offer__text {
+    padding-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 15px;
+  }
+  .offer .offer__cards {
+    font-size: 15px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  .offer .card {
+    color: #5e5e5e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #f4f4f4;
+    -webkit-box-shadow: 0 35px 35px -25px rgba(10, 10, 10, 0.1);
+            box-shadow: 0 35px 35px -25px rgba(10, 10, 10, 0.1);
+    margin: 1em 0.5em;
+  }
+  .offer .card__img {
+    width: 100%;
+  }
+  .offer .card__text {
+    padding: 0 1.5em 2em;
+  }
+  .offer .card__text h4 {
+    margin: 1em 0 0.5em;
+  }
+  .offer .card__text ul {
+    padding: 0;
+    list-style: none;
+  }
+  .offer .card__text ul li {
+    font-weight: 400;
+    font-size: 0.9em;
+    margin: 0.1em;
+    margin-left: 2em;
+    position: relative;
+  }
+  .offer .card__text ul li:before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: -20px;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    height: 0.5em;
+    width: 0.5em;
+    background-color: #5e5e5e;
+  }
+}
 /*# sourceMappingURL=Offer.css.map */

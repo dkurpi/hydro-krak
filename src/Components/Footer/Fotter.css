@@ -38,6 +38,15 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: .5em 0 1em;
+  padding: 0.5em 0 1em;
+}
+
+@media (min-width: 800px) {
+  .footer-contact ul {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
 }
 /*# sourceMappingURL=Fotter.css.map */

@@ -45,7 +45,7 @@ export default function Contact() {
         <div className="contacts-info">
           <h1><span>HYDRO</span>  KRAK</h1>
           <h2>Bartosz Borczak</h2>
-          <p>Kompleksowe usługi instalacji</p>
+          <p>Kompleksowe usługi instalacji hydralicznych</p>
           <div className="destination">
             <Icon
               icon={locationPin}
@@ -56,6 +56,7 @@ export default function Contact() {
               os. Centrum E 16 lok. 21 <br />
               woj. małopolskie
             </p>
+            
           </div>
         </div>
       </div>

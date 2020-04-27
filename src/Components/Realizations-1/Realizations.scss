@@ -2,62 +2,92 @@
   text-align: center;
 }
 
-
 .realization {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .realization__text {
+    padding-top: 2em;
+    text-align: center;
+    font-size: 15px;
+  }
+  .realization__cards {
+    font-size: 15px;
+  }
+
+  .card {
+    color: #5e5e5e;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-  
-    .realization__text {
-      padding-top: 2em;
-      text-align: center;
-      font-size: 15px;
+    background-color: #f4f4f4;
+    margin: 1em 0;
+  }
+
+  .card__img {
+    width: 100%;
+  }
+  .card__text {
+    padding: 0 1.5em 2em;
+
+    h4 {
+      margin: 1em 0 0.5em;
     }
-    .realization__cards {
-      font-size: 15px;
-    }
-  
-    .card {
-      color: #5e5e5e;
-      display: flex;
-      flex-direction: column;
-      background-color: #f4f4f4;
-      margin: 1em 0;
-    }
-  
-    .card__img {
-      width: 100%;
-    }
-    .card__text {
-      padding: 0 1.5em 2em;
-  
-      h4 {
-        margin: 1em 0 0.5em;
-      }
-  
-      ul {
-        padding: 0;
-        list-style: none;
-        li {
-          font-weight: 400;
-          font-size: 0.9em;
-          margin: 0.1em;
-          margin-left: 2em;
-          position: relative;
-  
-          &:before {
-            content: "";
-            position: absolute;
-            border-radius: 50%;
-            top: 50%;
-            left: -20px;
-            transform: translate(-50%, -50%);
-            height: 0.5em;
-            width: 0.5em;
-            background-color: #5e5e5e;
-          }
+
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        font-weight: 400;
+        font-size: 0.9em;
+        margin: 0.1em;
+        margin-left: 2em;
+        position: relative;
+
+        &:before {
+          content: "";
+          position: absolute;
+          border-radius: 50%;
+          top: 50%;
+          left: -20px;
+          transform: translate(-50%, -50%);
+          height: 0.5em;
+          width: 0.5em;
+          background-color: #5e5e5e;
         }
       }
     }
   }
-  
+}
+
+@media (min-width: 800px) {
+  .realization {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .realization__text {
+      padding-top: 4em;
+      text-align: center;
+      font-size: 16px;
+      padding-bottom: 4em;
+    }
+    .realization__cards {
+      font-size: 15px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      color: #393939;
+      box-shadow: 0 35px 35px -25px rgba(10, 10, 10, 0.1);
+
+      margin: 1em 1em;
+    }
+
+    .card__text {
+      padding: 0 1em 1em;
+      text-align: left;
+    }
+  }
+}

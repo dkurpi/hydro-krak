@@ -1,7 +1,7 @@
 .main-header {
   height: 100vh;
   width: 100vw;
-  background-image: url("/images/header.jpg");
+  background-image: url("/images/header2.jpg");
   background-size: cover;
   color: white;
   display: -webkit-box;
@@ -19,6 +19,7 @@
           align-items: center;
   text-transform: uppercase;
   position: relative;
+  background-attachment: fixed;
 }
 
 .main-header .callback {
@@ -85,5 +86,19 @@
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+}
+
+@media (min-width: 800px) {
+  .main-header .callback {
+    padding: 3em;
+  }
+  .main-header .callback h1 {
+    font-weight: 600;
+    font-size: 3em;
+    margin: .2em;
+  }
+  .main-header .callback .text {
+    font-size: 15px;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

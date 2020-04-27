@@ -25,4 +25,33 @@
   -webkit-filter: grayscale(0%);
           filter: grayscale(0%);
 }
+
+@media (min-width: 800px) {
+  .partners {
+    margin-top: 4em;
+    text-align: center;
+    padding: 2em 0 !important;
+  }
+  .partners-logo {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .partners-logo img {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+    max-width: 100%;
+    margin: 0.4em;
+  }
+  .partners-logo img:hover {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
+}
 /*# sourceMappingURL=Partners.css.map */
