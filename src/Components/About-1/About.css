@@ -1,0 +1,53 @@
+.about {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.about .about__text {
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+.about .about__img {
+  background-image: url("/images/company.jpg");
+  background-size: cover;
+  height: 40vh;
+  width: 100vw;
+}
+
+.about .numbers {
+  color: #f4f4f4;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  background-color: #028fcc;
+}
+
+.about .numbers ul {
+  max-width: 1200px;
+  list-style: none;
+  padding: 1.7em 0;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(150px, 2fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+}
+
+.about .numbers ul li {
+  margin: 1em 0;
+}
+
+.about .numbers ul li strong {
+  font-size: 1.4em;
+}
+
+.about .numbers ul li span {
+  display: block;
+}
+/*# sourceMappingURL=About.css.map */

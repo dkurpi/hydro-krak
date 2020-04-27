@@ -1,0 +1,42 @@
+.about {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .about__text {
+    padding: 1.5em;
+    margin-bottom: 1em;
+  }
+
+  .about__img {
+    background-image: url("/images/company.jpg");
+    background-size: cover;
+    height: 40vh;
+    width: 100vw;
+  }
+
+  .numbers {
+    color: #f4f4f4;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #028fcc;
+    ul {
+      max-width: 1200px;
+      list-style: none;
+      padding: 1.7em 0;
+      margin: 0 auto;
+
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
+
+      li {
+        margin: 1em 0;
+        strong {
+          font-size: 1.4em;
+        }
+        span {
+          display: block;
+        }
+      }
+    }
+  }
+}
