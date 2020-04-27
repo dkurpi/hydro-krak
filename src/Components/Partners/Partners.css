@@ -1,0 +1,28 @@
+.partners {
+  text-align: center;
+  padding: 2em 0 !important;
+}
+
+.partners-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.partners-logo img {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  max-width: 100%;
+  margin: 0.4em;
+}
+
+.partners-logo img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+}
+/*# sourceMappingURL=Partners.css.map */

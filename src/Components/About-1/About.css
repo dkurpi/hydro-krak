@@ -25,6 +25,7 @@
   color: #f4f4f4;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
+  padding: 0 2em;
   background-color: #028fcc;
 }
 

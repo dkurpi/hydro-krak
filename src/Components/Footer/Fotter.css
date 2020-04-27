@@ -1,0 +1,43 @@
+.footer-contact {
+  padding: 1.2em 0 !important;
+  margin: 1.2em auto !important;
+}
+
+.footer-contact ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.footer-contact ul li {
+  margin: 1em 0;
+}
+
+.footer-contact ul li a {
+  display: inline-block;
+  color: #f4f4f4;
+  text-decoration: none;
+  margin: 0 2em;
+}
+
+footer {
+  width: 100vw;
+  background-color: #028fcc;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ffffff;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5em 0 1em;
+}
+/*# sourceMappingURL=Fotter.css.map */

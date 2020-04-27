@@ -1,6 +1,7 @@
 h2 {
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: 1.8em;
+  margin-top: 0.7em;
 }
 
 h2:after {

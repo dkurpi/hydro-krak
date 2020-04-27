@@ -1,0 +1,19 @@
+.partners {
+  text-align: center;
+  padding: 2em 0 !important;
+}
+
+.partners-logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    filter: grayscale(100%);
+    max-width: 100%;
+    margin: 0.4em;
+    &:hover {
+      filter: grayscale(0%);
+    }
+  }
+}

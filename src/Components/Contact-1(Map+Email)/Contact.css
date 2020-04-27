@@ -1,0 +1,153 @@
+.job {
+  background-color: #028fcc;
+  padding: 3.4em 0;
+  color: white;
+}
+
+.job h3 {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+.job .button {
+  font-family: montserrat;
+  background-color: transparent;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 300;
+  margin-top: 1.8em;
+  padding: 0.6em;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  border: 1px solid white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.job .button:hover {
+  background-color: #fff;
+  color: #3a3a3a;
+}
+
+.map-section__map {
+  height: 50vh;
+  width: 100vw;
+}
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts .contacts-form {
+  margin: 2em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contacts .contacts-form input,
+.contacts .contacts-form textarea {
+  padding: 1.1em 1.5em;
+  font-family: montserrat;
+  border: 0;
+  background-color: #f4f4f4;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+}
+
+.contacts .contacts-form input:focus,
+.contacts .contacts-form textarea:focus {
+  color: white;
+}
+
+.contacts .contacts-form .button {
+  font-family: montserrat;
+  background-color: #028fcc;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 300;
+  margin-top: 0.8em;
+  padding: 0.6em;
+  border-radius: 0.5em;
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  border: 1px solid #028fcc;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.contacts .contacts-form .button:hover {
+  background-color: #007db3;
+  color: white;
+}
+
+.contacts .contacts-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts .contacts-info h1 {
+  font-size: 2em;
+}
+
+.contacts .contacts-info h1 span {
+  font-weight: 400;
+  color: #028fcc;
+}
+
+.contacts .contacts-info h1,
+.contacts .contacts-info h2 {
+  margin: 0.2em 0;
+}
+
+.contacts .contacts-info h2:after {
+  display: none;
+}
+
+.contacts .destination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: .5em 0 1em;
+}
+/*# sourceMappingURL=Contact.css.map */

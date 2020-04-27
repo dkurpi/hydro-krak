@@ -1,0 +1,115 @@
+.job {
+  background-color: #028fcc;
+  padding: 3.4em 0;
+  color: white;
+
+  h3 {
+    font-size: 2.2em;
+    margin: 0;
+  }
+
+  .button {
+    font-family: montserrat;
+    background-color: transparent;
+    color: white;
+    font-size: 0.8em;
+    font-weight: 300;
+    margin-top: 1.8em;
+    padding: 0.6em;
+    flex-basis: auto;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    align-self: center;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      background-color: #fff;
+      color: rgb(58, 58, 58);
+    }
+  }
+}
+
+.map-section__map {
+  height: 50vh;
+  width: 100vw;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  .contacts-form {
+    margin: 2em 0;
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      padding: 1.1em 1.5em;
+      font-family: montserrat;
+      border: 0;
+      background-color: #f4f4f4;
+      margin: 0.3em 0;
+      border-radius: 0.5em;
+
+      &:focus {
+        color: white;
+      }
+    }
+
+    .button {
+      font-family: montserrat;
+      background-color: #028fcc;
+      color: white;
+      font-size: 0.8em;
+      font-weight: 300;
+      margin-top: 0.8em;
+      padding: 0.6em;
+      border-radius: 0.5em;
+      flex-basis: auto;
+      border: 1px solid #028fcc;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      transition: 0.2s;
+      cursor: pointer;
+      &:hover {
+        background-color: #007db3;
+        color: white;
+      }
+    }
+  }
+
+  .contacts-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1 {
+      font-size: 2em;
+      span {
+        font-weight: 400;
+        color: #028fcc;
+      }
+    }
+
+    h1,
+    h2 {
+      margin: 0.2em 0;
+    }
+    h2:after {
+      display: none;
+    }
+  }
+
+  .destination {
+    display: flex;
+  }
+}
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding: .5em 0 1em;
+}

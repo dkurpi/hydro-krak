@@ -1,0 +1,33 @@
+.footer-contact {
+  padding: 1.2em 0 !important;
+  margin: 1.2em auto !important;
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    li {
+      margin: 1em 0;
+
+      a {
+          display: inline-block;
+        color: #f4f4f4;
+        text-decoration: none;
+        margin: 0 2em;
+      }
+    }
+  }
+}
+
+footer{
+    width: 100vw;
+  background-color: #028fcc;
+
+}
+
+.copyright {
+    display: flex;
+  background-color: #ffffff;
+    
+    justify-content: center;
+    padding: .5em 0 1em;
+  }
