@@ -1,14 +1,17 @@
 import React from "react";
-import "./Offer.css"
+import "./Offer.css";
 
-export default function Offer() {
+export default function Offer(props) {
   return (
-    <section className="offer container">
+    <section
+      ref={(rf) => props.getRef(rf, "offer")}
+      className="offer container"
+    >
       <div className="offer__text">
         <h2>NASZA OFERTA</h2>
         <p>
           Szeroki zakres wiedzy oraz wieloletnie doświadczenie w branży
-          zajmującej się montażem instalacji sanitarnych, gwarantujemy najwyższą
+          zajmującej się montażem instalacji sanitarnych. Gwarantujemy najwyższą
           jakość wykonywanych usług dla klienta. Niezależnie od rodzaju zlecenia
           mogą Państwo liczyć na pełen profesjonalizm, dyspozycyjność i pełne
           ukierunkowanie na potrzeby klienta.

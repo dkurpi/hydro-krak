@@ -2,10 +2,10 @@ import React from "react";
 import { Icon, InlineIcon } from "@iconify/react";
 import arrowDownAlt2 from "@iconify/icons-dashicons/arrow-down-alt2";
 import "./Header.css";
-export default function Header() {
+export default function Header(props) {
   return (
-    <header className="main-header">
-      <div className="callback">
+    <header  className="main-header">
+      <div ref={(rf) => props.getRef(rf, "header")} className="callback">
         <h1>
           <span>Profesjonalne</span> <br />
           usługi HYDRAULICZNE

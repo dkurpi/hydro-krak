@@ -2,7 +2,6 @@ import React from "react";
 import "./About.css";
 
 export default function About() {
-
   return (
     <>
       <section className="about">
@@ -19,7 +18,7 @@ export default function About() {
             przemysłowych jak i osób prywatnych.
           </p>
           <p>
-            Współpracujemy rownież z dana siecią fast-food, rownież ze
+            Współpracujemy rownież ze znaną siecią fast-food, oraz z
             współdzielniami mieszkaniowymi. Działamy glownie na terenach{" "}
             <b>Krakowa</b> jak i w jego okolicach
           </p>

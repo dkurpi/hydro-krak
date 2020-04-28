@@ -14,57 +14,48 @@ import ScrollMagic from "scrollmagic";
 
 class App extends Component {
   state = { isLoaded: false };
-  constructor(props) {
-    super(props);
-    this.controller = new ScrollMagic.Controller();
-  }
+  header = null;
+  offer = null;
+
   componentDidMount() {
     setTimeout(() => {
       this.setState({ isLoaded: true });
+      this.handleAnimations({ isLoaded: true });
     }, 2000);
-
-    new ScrollMagic.Scene({
-      triggerElement: "#h11",
-   
-    })
-      .addIndicators()
-      .addTo(this.controller); // assign the scene to the controller
   }
 
-  handleAnimations = () => {
-    const titles = document.querySelector(".col-lg-4.col-md-6.mb-4").childNodes;
-    const items = document.querySelector(
-      ".media-body.order-2.order-lg-2.ml-lg-5.flex-fill"
-    ).childNodes;
+  getRef = (insideRef, name) => (this[name] = insideRef);
 
+  handleLoading = () => {
     const tl = gsap.timeline({
-      defaults: { ease: "power3.inOut", opacity: 1 },
+      defaults: { ease: "power3.inOut", opacity: 0 },
     });
-    tl.from(titles, 2, { x: -300, opacity: 0, stagger: 0.2, delay: 0.4 }).from(
-      items,
+    tl.from(
+      this.header.childNodes,
+      1,
       {
-        x: 500,
+        y: 100,
         opacity: 0,
-        stagger: 0.2,
-        ease: "power0",
+        stagger: 0.1,
+        delay: 0.2,
       },
-      "-=1"
+      "+=1"
     );
   };
 
   render() {
     if (!this.state.isLoaded) return <SemipolarLoading color="#028fcc" />;
-
+    console.log(this.header, this.offer);
     return (
       <>
         {/* <Menu /> */}
-        <Header />
-        <Offer id="offer" />
-        <About />
-        <Realizations />
-        <Partners />
-        <Contact />
-        <Footer />
+        <Header getRef={this.getRef} />
+        <Offer getRef={this.getRef} />
+        <About getRef={this.getRef} />
+        <Realizations getRef={this.getRef} />
+        <Partners getRef={this.getRef} />
+        <Contact getRef={this.getRef} />
+        <Footer getRef={this.getRef} />
       </>
     );
   }
