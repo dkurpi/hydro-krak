@@ -19,7 +19,6 @@
           align-items: center;
   text-transform: uppercase;
   position: relative;
-  background-attachment: fixed;
 }
 
 .main-header .callback {
@@ -89,6 +88,9 @@
 }
 
 @media (min-width: 800px) {
+  .main-header {
+    background-attachment: fixed;
+  }
   .main-header .callback {
     padding: 3em;
   }

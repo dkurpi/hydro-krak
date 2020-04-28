@@ -8,6 +8,9 @@ body {
   font-weight: 300;
   color: rgb(102, 102, 102);
   font-size: 15px;
+  scroll-behavior: smooth;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 a {

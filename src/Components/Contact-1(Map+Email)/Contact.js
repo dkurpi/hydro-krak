@@ -34,7 +34,7 @@ export default function Contact() {
 
       <div className="contacts container">
         <div className="contacts-form">
-          <h2>Zapytaj o darmową wycenę</h2>
+          <h2>Darmowa wycena</h2>
           <input type="text" placeholder="Imię" />
           <input type="text" placeholder="Nazwisko" />
           <input type="text" placeholder="Adres e-mail" />

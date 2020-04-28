@@ -50,6 +50,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: center;
 }
 
 .contacts .contacts-form {
@@ -151,12 +152,13 @@
   }
   .job .container p {
     margin-left: 0;
+    padding-right: 3em;
   }
   .job .container .button {
     font-size: 1em;
     font-weight: 00;
     margin-top: 0.8em;
-    padding: 20px 22px;
+    padding: 15px 15px;
   }
   .map-section__map {
     height: 70vh;
@@ -171,7 +173,7 @@
     display: grid;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
-    margin: 2em auto !important;
+    margin: 2em auto 4em !important;
   }
   .contacts .contacts-info,
   .contacts .contacts-form {

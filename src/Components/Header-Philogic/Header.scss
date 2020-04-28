@@ -10,7 +10,6 @@
   align-items: center;
   text-transform: uppercase;
   position: relative;
-  background-attachment: fixed;
 
   .callback {
     display: flex;
@@ -67,6 +66,8 @@
 
 @media (min-width: 800px) {
   .main-header {
+  background-attachment: fixed;
+
     .callback {
       padding: 3em;
       h1 {
