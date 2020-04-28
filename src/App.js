@@ -13,7 +13,7 @@ import gsap from "gsap";
 import ScrollMagic from "scrollmagic";
 
 class App extends Component {
-  state = { isLoaded: true };
+  state = { isLoaded: false };
   constructor(props) {
     super(props);
     this.controller = new ScrollMagic.Controller();
@@ -21,7 +21,7 @@ class App extends Component {
   componentDidMount() {
     setTimeout(() => {
       this.setState({ isLoaded: true });
-    }, 3000);
+    }, 2000);
 
     new ScrollMagic.Scene({
       triggerElement: "#h11",
@@ -60,7 +60,6 @@ class App extends Component {
         {/* <Menu /> */}
         <Header />
         <Offer id="offer" />
-        <h1 id="h11">111</h1>
         <About />
         <Realizations />
         <Partners />
