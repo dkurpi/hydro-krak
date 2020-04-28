@@ -5,7 +5,7 @@ export default function About() {
   return (
     <>
       <section className="about">
-        <div className="about__text">
+        <div data-aos="fade-right" className="about__text">
           <h2>O FIRMIE</h2>
           <p>
             Firma Hydrokrak zajmuję się montażem i serwisem instalacji
@@ -29,27 +29,27 @@ export default function About() {
       </section>
       <section className="numbers">
         <ul>
-          <li>
+          <li data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="0">
             <strong>2017</strong>
             <span>
               Rok <br />
               założenia
             </span>
           </li>
-          <li>
+          <li data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="300">
             <strong>7</strong>
             <span>
               Liczba <br /> pracowników
             </span>
           </li>
-          <li>
+          <li data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="600">
             <strong>2 500+</strong>
             <span>
               Wykonanych <br />
               projektów
             </span>
           </li>
-          <li>
+          <li data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="900">
             <strong>1 500+</strong>
             <span>
               Zadowoloncyh <br />

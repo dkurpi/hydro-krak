@@ -10,13 +10,22 @@ import Footer from "./Components/Footer/Footer";
 import "./App.css";
 import { SemipolarLoading } from "react-loadingg";
 import gsap from "gsap";
-import ScrollMagic from "scrollmagic";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 class App extends Component {
   state = { isLoaded: false };
   header = null;
   offer = null;
+
   componentDidMount() {
+    let vh = window.innerHeight;
+    // if (vh < 800) vh = 1200;
+    console.log(vh)
+    AOS.init({
+      offset: vh*0.5,
+      duration: 1200,
+    });
     setTimeout(() => {
       this.setState({ isLoaded: true });
       this.handleLoading();
@@ -37,7 +46,7 @@ class App extends Component {
         stagger: 0.1,
         delay: 0.2,
       },
-      "+=2"
+      "+=1"
     );
   };
 

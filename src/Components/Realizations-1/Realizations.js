@@ -4,7 +4,7 @@ import "./Realizations.css";
 export default function Realizations() {
   return (
     <div className="real container realization">
-      <div className="realization__text">
+      <div data-aos="fade-right" className="realization__text">
         <h2>NASZE REALIZACJE</h2>
         <p>
               Szeroki zakres wiedzy oraz wieloletnie doświadczenie w branży
@@ -17,7 +17,7 @@ export default function Realizations() {
         </p>
       </div>
       <div className="realization__cards">
-        <div className="card">
+        <div data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="000" className="card">
           <img className="card__img" src="/images/card1.jpg" alt="" />
           <div className="card__text">
             <p>
@@ -27,7 +27,7 @@ export default function Realizations() {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="300" className="card">
           <img className="card__img" src="/images/card1.jpg" alt="" />
           <div className="card__text">
             <p>
@@ -37,7 +37,7 @@ export default function Realizations() {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="600" className="card">
           <img className="card__img" src="/images/card1.jpg" alt="" />
           <div className="card__text">
             <p>
@@ -47,7 +47,7 @@ export default function Realizations() {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="900" className="card">
           <img className="card__img" src="/images/card1.jpg" alt="" />
           <div className="card__text">
             <p>
@@ -57,7 +57,7 @@ export default function Realizations() {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="1200" className="card">
           <img className="card__img" src="/images/card1.jpg" alt="" />
           <div className="card__text">
             <p>
@@ -67,7 +67,7 @@ export default function Realizations() {
             </p>
           </div>
         </div>
-        <div className="card">
+        <div data-aos="fade-up"  ata-aos-duration="200"  data-aos-delay="1500" className="card">
           <img className="card__img" src="/images/card2.jpg" alt="" />
           <div className="card__text">
             <p>
