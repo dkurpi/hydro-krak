@@ -4,8 +4,8 @@ import arrowDownAlt2 from "@iconify/icons-dashicons/arrow-down-alt2";
 import "./Header.css";
 export default function Header(props) {
   return (
-    <header  className="main-header">
-      <div ref={(rf) => props.getRef(rf, "header")} className="callback">
+    <header className="main-header">
+      <div className="callback">
         <h1>
           <span>Profesjonalne</span> <br />
           usługi HYDRAULICZNE

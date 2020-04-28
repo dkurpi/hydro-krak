@@ -16,30 +16,28 @@ class App extends Component {
   state = { isLoaded: false };
   header = null;
   offer = null;
-
   componentDidMount() {
     setTimeout(() => {
       this.setState({ isLoaded: true });
       this.handleLoading();
-    }, 2000);
+    }, 1000);
   }
 
-  getRef = (insideRef, name) => (this[name] = insideRef);
-
   handleLoading = () => {
+    const header = document.querySelector(".main-header .callback").childNodes;
     const tl = gsap.timeline({
       defaults: { ease: "power3.inOut", opacity: 0 },
     });
     tl.from(
-      this.header.childNodes,
+      header,
       1,
       {
-        y: 100,
+        y: 40,
         opacity: 0,
         stagger: 0.1,
         delay: 0.2,
       },
-      "+=1"
+      "+=2"
     );
   };
 
@@ -49,13 +47,13 @@ class App extends Component {
     return (
       <>
         {/* <Menu /> */}
-        <Header getRef={this.getRef} />
-        <Offer getRef={this.getRef} />
-        <About getRef={this.getRef} />
-        <Realizations getRef={this.getRef} />
-        <Partners getRef={this.getRef} />
-        <Contact getRef={this.getRef} />
-        <Footer getRef={this.getRef} />
+        <Header />
+        <Offer />
+        <About />
+        <Realizations />
+        <Partners />
+        <Contact />
+        <Footer />
       </>
     );
   }

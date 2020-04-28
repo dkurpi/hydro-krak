@@ -3,10 +3,7 @@ import "./Offer.css";
 
 export default function Offer(props) {
   return (
-    <section
-      ref={(rf) => props.getRef(rf, "offer")}
-      className="offer container"
-    >
+    <section className="offer container">
       <div className="offer__text">
         <h2>NASZA OFERTA</h2>
         <p>
