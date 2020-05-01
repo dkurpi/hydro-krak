@@ -1,6 +1,5 @@
 .footer-contact {
   padding: 1.2em 0 !important;
-  margin: 1.2em auto !important;
 }
 
 .footer-contact ul {
@@ -22,7 +21,11 @@
   display: inline-block;
   color: #f4f4f4;
   text-decoration: none;
-  margin: 0 2em;
+  margin: 0 1em;
+}
+
+.footer-contact ul .icon-footer {
+  font-size: 32px;
 }
 
 footer {
@@ -47,6 +50,9 @@ footer {
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-contact ul .icon-footer {
+    font-size: 42px;
   }
 }
 /*# sourceMappingURL=Fotter.css.map */

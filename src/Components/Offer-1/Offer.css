@@ -61,7 +61,7 @@ h2:after {
 }
 
 .offer .card__text h4 {
-  margin: 1em 0 0.5em;
+  margin: 1em 0.5em 0.5em;
 }
 
 .offer .card__text ul {
@@ -93,7 +93,7 @@ h2:after {
 @media (min-width: 800px) {
   h2 {
     font-size: 2em;
-    letter-spacing: .2em;
+    letter-spacing: 0.2em;
     margin-bottom: 1.8em;
     margin-top: 0.7em;
   }
@@ -125,6 +125,9 @@ h2:after {
     margin-bottom: 2em;
     text-align: center;
     font-size: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .offer .offer__cards {
     font-size: 15px;
@@ -151,10 +154,11 @@ h2:after {
     width: 100%;
   }
   .offer .card__text {
-    padding: 0 1.5em 2em;
+    padding: 0.2em 2em 1em;
   }
   .offer .card__text h4 {
-    margin: 1em 0 0.5em;
+    margin: 1em 1em 0.5em 0.5em;
+    font-size: 1.05em;
   }
   .offer .card__text ul {
     padding: 0;

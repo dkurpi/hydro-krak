@@ -15,7 +15,7 @@ export default function Fotter() {
             <Icon
               className="icon-footer"
               icon={telephoneIcon}
-              style={{ color: "#ffffff", fontSize: "32px" }}
+              style={{ color: "#ffffff" }}
             />
             <a href="tel:888 888 888">888 888 888</a>
           </li>
@@ -23,7 +23,7 @@ export default function Fotter() {
             <Icon
               className="icon-footer"
               icon={mailIcon}
-              style={{ color: "#ffffff", fontSize: "32px" }}
+              style={{ color: "#ffffff" }}
             />
             <a href="mailto:instalacje@hydro-krak.pl">
               instalacje@hydro-krak.pl
@@ -33,7 +33,7 @@ export default function Fotter() {
             <Icon
               className="icon-footer"
               icon={bxlFacebookCircle}
-              style={{ color: "#ffffff", fontSize: "32px" }}
+              style={{ color: "#ffffff" }}
             />
             <a href="#">hydrokrak</a>
           </li>

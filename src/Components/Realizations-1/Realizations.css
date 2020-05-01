@@ -19,6 +19,14 @@
   padding-top: 2em;
   text-align: center;
   font-size: 15px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.realization .realization__text p {
+  line-height: 20px;
+  font-size: 15px;
 }
 
 .realization .realization__cards {
@@ -109,7 +117,7 @@
     margin: 1em 1em;
   }
   .realization .card__text {
-    padding: 0 1em 1em;
+    padding: 0 2em 2em;
     text-align: left;
   }
 }

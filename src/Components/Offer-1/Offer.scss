@@ -44,7 +44,7 @@ h2 {
     padding: 0 1.5em 2em;
 
     h4 {
-      margin: 1em 0 0.5em;
+      margin: 1em 0.5em 0.5em;
     }
 
     ul {
@@ -76,8 +76,8 @@ h2 {
 @media (min-width: 800px) {
   h2 {
     font-size: 2em;
-    letter-spacing: .2em;
-    
+    letter-spacing: 0.2em;
+
     &:after {
       content: "";
       position: absolute;
@@ -102,6 +102,9 @@ h2 {
       margin-bottom: 2em;
       text-align: center;
       font-size: 15px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .offer__cards {
       font-size: 15px;
@@ -122,10 +125,11 @@ h2 {
       width: 100%;
     }
     .card__text {
-      padding: 0 1.5em 2em;
+      padding: 0.2em 2em 1em;
 
       h4 {
-        margin: 1em 0 0.5em;
+        margin: 1em 1em 0.5em 0.5em;
+        font-size: 1.05em;
       }
 
       ul {

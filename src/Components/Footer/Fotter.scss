@@ -1,6 +1,6 @@
 .footer-contact {
   padding: 1.2em 0 !important;
-  margin: 1.2em auto !important;
+  // margin: 1.2em auto !important;
   ul {
     list-style: none;
     display: flex;
@@ -12,8 +12,11 @@
         display: inline-block;
         color: #f4f4f4;
         text-decoration: none;
-        margin: 0 2em;
+        margin: 0 1em;
       }
+    }
+    .icon-footer {
+      font-size: 32px;
     }
   }
 }
@@ -31,12 +34,13 @@ footer {
   padding: 0.5em 0 1em;
 }
 @media (min-width: 800px) {
- 
-
   .footer-contact {
     ul {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
+      .icon-footer {
+        font-size: 42px;
+      }
     }
   }
 }
