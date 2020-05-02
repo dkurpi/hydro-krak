@@ -4,12 +4,16 @@ import MenuIndicators from "./Components/Menu-indicators/MenuIndicators.js";
 import Header from "./Components/Header-Philogic/Header";
 import Offer from "./Components/Offer-1/Offer";
 import About from "./Components/About-1/About";
+import Aplication from "./Components/Aplication/Aplication";
 import Realizations from "./Components/Realizations-1/Realizations";
 import Partners from "./Components/Partners/Partners";
 import Contact from "./Components/Contact-1(Map+Email)/Contact";
 import Footer from "./Components/Footer/Footer";
 import "./App.css";
+/////Routing
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
+//////Animations
 import { SemipolarLoading } from "react-loadingg";
 import gsap from "gsap";
 
@@ -17,27 +21,18 @@ import "aos/dist/aos.css";
 import AOS from "aos";
 
 ////////SCROLL
-import {
-  Link,
-  DirectLink,
-  Element,
-  Events,
-  animateScroll as scroll,
-  scrollSpy,
-  scroller,
-} from "react-scroll";
+import { Events, animateScroll as scroll, scroller } from "react-scroll";
 
 class App extends Component {
-  state = { isLoaded: true };
-  header = null;
-  offer = null;
+  state = { isLoaded: false };
+  vh = 0;
 
   componentDidMount() {
-    let vh = window.innerHeight;
+    this.vh = window.innerHeight;
     // if (vh < 800) vh = 1200;
-    console.log(vh);
+    console.log(this.vh);
     AOS.init({
-      offset: vh * 0.5,
+      offset: this.vh * 0.3,
       duration: 1200,
     });
     setTimeout(() => {
@@ -45,9 +40,15 @@ class App extends Component {
       this.handleLoading();
     }, 1000);
 
-    Events.scrollEvent.register("begin", function () {});
+    Events.scrollEvent.register("begin", function () {
+      console.log("begin");
+    });
 
-    Events.scrollEvent.register("end", function () {});
+    Events.scrollEvent.register("end", function () {
+      console.log("end");
+    });
+
+    window.addEventListener("scroll", this.handleScrolling);
   }
 
   componentWillUnmount() {
@@ -58,15 +59,29 @@ class App extends Component {
     scroll.scrollToTop();
   }
   scrollTo(elmnt) {
+    const offset = Math.floor(-this.vh * 0.2);
+
     console.log("scrollTo");
     scroller.scrollTo(elmnt, {
       duration: 800,
       delay: 0,
       smooth: "easeInOutQuart",
+      offset: offset,
     });
   }
 
+  handleScrolling = () => {
+    const fromTop = window.scrollY;
+    console.log(fromTop);
+    const navbar = document.querySelector(".nav");
+    if (!navbar) return;
+    if (fromTop > this.vh * 0.8) {
+      navbar.classList.add("fixed");
+    } else navbar.classList.remove("fixed");
+  };
+
   handleLoading = () => {
+    if (!document.querySelector(".main-header .callback")) return;
     const header = document.querySelector(".main-header .callback").childNodes;
     const tl = gsap.timeline({
       defaults: { ease: "power3.inOut", opacity: 0 },
@@ -88,23 +103,43 @@ class App extends Component {
 
   render() {
     if (!this.state.isLoaded) return <SemipolarLoading color="#028fcc" />;
-    console.log(this.header, this.offer);
     return (
-      <>
-        {/* <Menu /> */}
-        <MenuIndicators
+      <Router>
+        <Menu
           scrollToTop={this.scrollToTop}
           scrollTo={this.scrollTo}
+          vh={this.vh}
         />
-        <Header />
-        <Offer />
-        <About />
-        <Realizations />
-        <Partners />
-        <Contact />
+        <Switch>
+          <Route exact path="/">
+            <MenuIndicators
+              scrollToTop={this.scrollToTop}
+              scrollTo={this.scrollTo}
+              vh={this.vh}
+            />
+            <Header vh={this.vh} />
+            <Offer />
+            <About />
+            <Realizations />
+            <Partners />
+            <Contact />
+          </Route>
+          <Route exact path="/aplikuj">
+            <div className="menubgc"></div>
+            <Aplication />
+          </Route>
+          <Route exact path="/zamow">
+            <div className="menubgc"></div>
 
+            <Realizations />
+          </Route>
+          <Route exact path="/realizacje">
+            <div className="menubgc"></div>
+            <Realizations />
+          </Route>
+        </Switch>
         <Footer />
-      </>
+      </Router>
     );
   }
 }

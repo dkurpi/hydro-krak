@@ -1,20 +1,39 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "./MenuIndicators.css";
 
 import { Link } from "react-scroll";
 
 export default function MenuIndicators(props) {
+  const wrapper = useRef(null);
+  useEffect(() => {
+    if (!wrapper.current) return;
+    wrapper.current.style.opacity = "0";
+  }, []);
+
+  const handleVisibilityMenu = (state) => {
+    if (!wrapper.current) return;
+    state
+      ? (wrapper.current.style.opacity = "1")
+      : (wrapper.current.style.opacity = "0");
+
+    state
+      ? (wrapper.current.style.opacity = "1")
+      : (wrapper.current.style.opacity = "0");
+  };
+
+  const offset = Math.floor(-props.vh * 0.2);
+
   return (
-    <div className="fixedMenu">
+    <div ref={wrapper} className="fixedMenu">
       <Link
-        activeClass="active white"
+        activeClass="active nodisplay"
         to="header"
         spy={true}
         smooth={true}
-        offset={-50}
+        offset={offset}
         duration={500}
-        onSetActive={() => console.log("active")}
-        onSetInactive={() => console.log("no-active")}
+        onSetActive={() => handleVisibilityMenu(false)}
+        onSetInactive={() => handleVisibilityMenu(true)}
       >
         <div className="dot"></div>
       </Link>
@@ -23,7 +42,7 @@ export default function MenuIndicators(props) {
         to="offer"
         spy={true}
         smooth={true}
-        offset={-50}
+        offset={offset}
         duration={500}
         onSetActive={() => console.log("active")}
         onSetInactive={() => console.log("no-active")}
@@ -36,6 +55,7 @@ export default function MenuIndicators(props) {
         spy={true}
         smooth={true}
         // offset={50}
+        offset={offset}
         duration={500}
         onSetActive={() => console.log("active")}
         onSetInactive={() => console.log("no-active")}
@@ -47,7 +67,7 @@ export default function MenuIndicators(props) {
         to="realizations"
         spy={true}
         smooth={true}
-        offset={50}
+        offset={offset}
         duration={500}
         onSetActive={() => console.log("active")}
         onSetInactive={() => console.log("no-active")}
@@ -59,7 +79,7 @@ export default function MenuIndicators(props) {
         to="contact"
         spy={true}
         smooth={true}
-        offset={50}
+        offset={0}
         duration={500}
         onSetActive={() => console.log("active")}
         onSetInactive={() => console.log("no-active")}

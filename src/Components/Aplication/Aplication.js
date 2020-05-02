@@ -1,15 +1,15 @@
 import React from "react";
-import "./About.css";
+import "./Aplication.css";
 
 import { Element } from "react-scroll";
 
-export default function About() {
+export default function Aplication() {
   return (
     <>
-      <Element name="about">
-        <section className="about">
+      <Element name="aplication">
+        <section className="aplication">
           <div data-aos="fade-right" className="about__text">
-            <h2>O FIRMIE</h2>
+            <h2>APLIKUJ</h2>
             <p>
               Firma Hydrokrak zajmuję się montażem i serwisem instalacji
               sanitarnych. Działamy zgodnie ze standardami jak i wymaganiami
@@ -32,27 +32,27 @@ export default function About() {
         </section>
         <section className="numbers">
           <ul>
-            <li data-aos="fade-up" data-aos-offset="200"	 ata-aos-duration="200" data-aos-delay="0">
+            <li>
               <strong>2017</strong>
               <span>
                 Rok <br />
                 założenia
               </span>
             </li>
-            <li data-aos="fade-up" data-aos-offset="200"	 ata-aos-duration="200" data-aos-delay="300">
+            <li>
               <strong>7</strong>
               <span>
                 Liczba <br /> pracowników
               </span>
             </li>
-            <li data-aos="fade-up" data-aos-offset="200"	 ata-aos-duration="200" data-aos-delay="600">
+            <li>
               <strong>2 500+</strong>
               <span>
                 Wykonanych <br />
                 projektów
               </span>
             </li>
-            <li data-aos="fade-up" data-aos-offset="200"	 ata-aos-duration="200" data-aos-delay="900">
+            <li>
               <strong>1 500+</strong>
               <span>
                 Zadowoloncyh <br />

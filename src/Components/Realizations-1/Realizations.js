@@ -40,13 +40,14 @@ export default function Realizations() {
       content and make changes to the font.`,
     },
   ];
-  const cards = cardsObj.map((card) => {
+  const cards = cardsObj.map((card, idx) => {
     return (
       <div
         data-aos="fade-up"
         ata-aos-duration="200"
-        data-aos-delay="000"
+        data-aos-delay={200 * idx}
         className="card"
+        data-aos-offset="50"
       >
         <LightgalleryProvider>
           <LightgalleryItem group={`item`} src={card.images[0]}>

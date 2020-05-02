@@ -7,6 +7,8 @@
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   z-index: 1;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .fixedMenu .dot {
