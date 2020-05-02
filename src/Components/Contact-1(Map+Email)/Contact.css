@@ -80,29 +80,16 @@
 }
 
 .contacts .contacts-form .button {
-  font-family: montserrat;
-  background-color: #028fcc;
-  color: white;
-  font-size: 0.8em;
-  font-weight: 300;
-  margin-top: 0.8em;
-  padding: 0.6em;
-  border-radius: 0.5em;
-  -ms-flex-preferred-size: auto;
-      flex-basis: auto;
-  border: 1px solid #028fcc;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  -webkit-transition: 0.2s;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-.contacts .contacts-form .button:hover {
-  background-color: #007db3;
-  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .contacts .contacts-info {
@@ -116,7 +103,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 2em 0;
+  margin-bottom: 2em;
 }
 
 .contacts .contacts-info h1 {

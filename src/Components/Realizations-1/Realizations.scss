@@ -28,16 +28,26 @@
     color: #5e5e5e;
     display: flex;
     flex-direction: column;
+    transition: 0.5s;
     background-color: #f4f4f4;
     margin: 1em 0;
   }
 
+  .card_img-wrapper {
+    overflow: hidden;
+  }
+
   .card__img {
     width: 100%;
+    cursor: pointer;
+
+    transition: 0.4s;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
   .card__text {
     padding: 0 1.5em 2em;
-    
 
     h4 {
       margin: 1em 0 0.5em;

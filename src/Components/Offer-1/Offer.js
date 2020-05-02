@@ -1,6 +1,6 @@
 import React from "react";
 import "./Offer.css";
-
+import { Element } from "react-scroll";
 
 export default function Offer(props) {
   const cards = (
@@ -31,7 +31,7 @@ export default function Offer(props) {
           </ul>
         </div>
       </div>
-      <div  data-aos="fade-left" className="card">
+      <div data-aos="fade-left" className="card">
         <img className="card__img" src="/images/card3.jpg" alt="" />
         <div className="card__text">
           <h4>Przeróbki i modernizacja </h4>
@@ -46,18 +46,20 @@ export default function Offer(props) {
     </div>
   );
   return (
-    <section  className="offer container">
-      <div  data-aos="fade-right" className="offer__text">
-        <h2>NASZA OFERTA</h2>
-        <p>
-          Szeroki zakres wiedzy oraz wieloletnie doświadczenie w branży
-          zajmującej się montażem instalacji sanitarnych. Gwarantujemy najwyższą
-          jakość wykonywanych usług dla klienta. Niezależnie od rodzaju zlecenia
-          mogą Państwo liczyć na pełen profesjonalizm, dyspozycyjność i pełne
-          ukierunkowanie na potrzeby klienta.
-        </p>
-      </div>
-      {cards}
-    </section>
+    <Element name="offer">
+      <section className="offer container">
+        <div data-aos="fade-right" className="offer__text">
+          <h2>NASZA OFERTA</h2>
+          <p>
+            Szeroki zakres wiedzy oraz wieloletnie doświadczenie w branży
+            zajmującej się montażem instalacji sanitarnych. Gwarantujemy
+            najwyższą jakość wykonywanych usług dla klienta. Niezależnie od
+            rodzaju zlecenia mogą Państwo liczyć na pełen profesjonalizm,
+            dyspozycyjność i pełne ukierunkowanie na potrzeby klienta.
+          </p>
+        </div>
+        {cards}
+      </section>
+    </Element>
   );
 }

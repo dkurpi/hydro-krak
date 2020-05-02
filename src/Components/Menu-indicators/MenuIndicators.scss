@@ -1,0 +1,36 @@
+.fixedMenu {
+  color: rgb(44, 44, 44);
+  font-weight: 500;
+  position: fixed;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  z-index: 1;
+
+  .dot {
+    cursor: pointer;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    margin: 10px;
+    background-color: gray;
+    transition: 0.2s;
+  }
+  .active {
+    .dot {
+      background-color: #028fcc;
+      transform: scale(1.6);
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .fixedMenu {
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    flex-direction: column;
+    z-index: 1;
+  }
+}
