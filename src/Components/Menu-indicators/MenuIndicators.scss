@@ -2,10 +2,9 @@
   color: rgb(44, 44, 44);
   font-weight: 500;
   position: fixed;
-  top: 95%;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
+  top: 50%;
+  left: 0px;
+  transform: translateY(50%);
   z-index: 1;
 
   .dot {
@@ -14,12 +13,14 @@
     width: 12px;
     border-radius: 50%;
     margin: 10px;
-    background-color: gray;
+    background-color: rgb(212, 212, 212);
     transition: 0.2s;
   }
   .active {
     .dot {
       background-color: #028fcc;
+      border: none;
+
       transform: scale(1.6);
     }
   }
@@ -27,10 +28,6 @@
 
 @media (min-width: 800px) {
   .fixedMenu {
-    top: 50%;
     left: 20px;
-    transform: translateY(-50%);
-    flex-direction: column;
-    z-index: 1;
   }
 }

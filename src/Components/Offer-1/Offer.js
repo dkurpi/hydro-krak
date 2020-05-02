@@ -5,7 +5,7 @@ import { Element } from "react-scroll";
 export default function Offer(props) {
   const cards = (
     <div className="offer__cards">
-      <div data-aos="fade-right" className="card">
+      <div data-aos="fade-up" className="card">
         <img className="card__img" src="/images/card1.jpg" alt="" />
         <div className="card__text">
           <h4>Montaż instalacji</h4>
@@ -31,7 +31,7 @@ export default function Offer(props) {
           </ul>
         </div>
       </div>
-      <div data-aos="fade-left" className="card">
+      <div data-aos="fade-up" className="card">
         <img className="card__img" src="/images/card3.jpg" alt="" />
         <div className="card__text">
           <h4>Przeróbki i modernizacja </h4>
