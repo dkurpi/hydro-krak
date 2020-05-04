@@ -4,7 +4,7 @@ import ButtonUI from "./Button.js";
 import { Icon } from "@iconify/react";
 import locationPin from "@iconify/icons-entypo/location-pin";
 import "./Contact.css";
-
+import { Link as LinkRouter } from "react-router-dom";
 import { Element } from "react-scroll";
 
 export default class Contact extends Component {
@@ -67,9 +67,14 @@ export default class Contact extends Component {
                 ciągły rozwój.
               </p>
             </div>
-            <a className="button" href="#">
-              <div>Dowiedz się wiecej</div>
-            </a>
+            <LinkRouter
+              onClick={() => setTimeout(() => this.props.scrollToTop(), 100)}
+              to="/aplikuj"
+            >
+              <a className="button" href="#">
+                <div>Dowiedz się wiecej</div>
+              </a>
+            </LinkRouter>
           </div>
         </div>
         <Element name="contact">

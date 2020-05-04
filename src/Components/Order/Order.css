@@ -31,6 +31,7 @@
 
 .realization .realization__cards {
   font-size: 15px;
+  margin-bottom: 20vh;
 }
 
 .realization .card {
@@ -138,4 +139,4 @@
     text-align: left;
   }
 }
-/*# sourceMappingURL=Realizations.css.map */
+/*# sourceMappingURL=Order.css.map */

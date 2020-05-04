@@ -10,6 +10,8 @@ import Realizations from "./Components/Realizations-1/Realizations";
 import Partners from "./Components/Partners/Partners";
 import Contact from "./Components/Contact-1(Map+Email)/Contact";
 import Footer from "./Components/Footer/Footer";
+import Gallery from "./Components/Gallery/Gallery";
+import Order from "./Components/Order/Order";
 import "./App.css";
 /////Routing
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -21,7 +23,6 @@ import gsap from "gsap";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
-
 ////////SCROLL
 import { Events, animateScroll as scroll, scroller } from "react-scroll";
 
@@ -30,7 +31,6 @@ class App extends Component {
   vh = 0;
 
   componentDidMount() {
-
     this.vh = window.innerHeight;
     // if (vh < 800) vh = 1200;
     console.log(this.vh);
@@ -58,6 +58,7 @@ class App extends Component {
     Events.scrollEvent.remove("begin");
     Events.scrollEvent.remove("end");
   }
+
   scrollToTop() {
     scroll.scrollToTop();
   }
@@ -102,8 +103,6 @@ class App extends Component {
     );
   };
 
-  // scrollTo = () => {};
-
   render() {
     if (!this.state.isLoaded) return <SemipolarLoading color="#028fcc" />;
     return (
@@ -124,9 +123,9 @@ class App extends Component {
             <Offer />
             {/* <OfferRellax /> */}
             <About />
-            <Realizations />
+            <Realizations scrollToTop={this.scrollToTop} />
             <Partners />
-            <Contact />
+            <Contact scrollToTop={this.scrollToTop} />
           </Route>
           <Route exact path="/aplikuj">
             <div className="menubgc"></div>
@@ -134,12 +133,11 @@ class App extends Component {
           </Route>
           <Route exact path="/zamow">
             <div className="menubgc"></div>
-
-            <Realizations />
+            <Order />
           </Route>
-          <Route exact path="/realizacje">
+          <Route exact path="/galeria">
             <div className="menubgc"></div>
-            <Realizations />
+            <Gallery scrollToTop={this.scrollToTop} />
           </Route>
         </Switch>
         <Footer />

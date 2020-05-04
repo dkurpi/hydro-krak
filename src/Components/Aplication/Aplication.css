@@ -1,5 +1,5 @@
 .aplication {
-  text-align: center;
+  text-align: left;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,9 +9,96 @@
           flex-direction: column;
 }
 
+.aplication h2:after {
+  left: 2.5em;
+}
+
 .aplication .about__text {
   padding: 1.5em;
   margin-bottom: 1em;
+}
+
+.aplication .about__text .contacts-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 3em 0 0;
+}
+
+.aplication .about__text .contacts-form input,
+.aplication .about__text .contacts-form textarea {
+  padding: 1.1em 1.5em;
+  font-family: montserrat;
+  border: 0;
+  background-color: #f4f4f4;
+  margin: 0.3em 0;
+  border-radius: 0.5em;
+}
+
+.aplication .about__text .contacts-form input:focus,
+.aplication .about__text .contacts-form textarea:focus {
+  color: black;
+}
+
+.aplication .about__text .contacts-form .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.aplication .about__text .contacts-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 2em;
+}
+
+.aplication .about__text .contacts-info h1 {
+  font-size: 2em;
+}
+
+.aplication .about__text .contacts-info h1 span {
+  font-weight: 400;
+  color: #028fcc;
+}
+
+.aplication .about__text .contacts-info h1,
+.aplication .about__text .contacts-info h2 {
+  margin: 0.2em 0;
+}
+
+.aplication .about__text .contacts-info h2:after {
+  display: none;
+}
+
+.aplication .about__text .contacts-info .destination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.aplication .about__text .contacts-info .info2 {
+  text-align: left;
+  padding: 1em 0;
+  line-height: 1.4em;
 }
 
 .aplication .about__img {
@@ -19,73 +106,11 @@
   background-size: cover;
   height: 40vh;
   width: 100vw;
-}
-
-.aplication .numbers {
-  color: #f4f4f4;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  padding: 0 2em;
-  background-color: #028fcc;
-}
-
-.aplication .numbers ul {
-  max-width: 1200px;
-  list-style: none;
-  padding: 1.7em 0;
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(150px, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
-}
-
-.aplication .numbers ul li {
-  margin: 1em 0;
-}
-
-.aplication .numbers ul li strong {
-  font-size: 1.4em;
-}
-
-.aplication .numbers ul li span {
-  display: block;
-}
-
-.numbers {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  color: #f4f4f4;
-  padding: 0 2em;
-  background-color: #028fcc;
-}
-
-.numbers ul {
-  max-width: 1200px;
-  list-style: none;
-  padding: 1.7em 0;
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(150px, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
-}
-
-.numbers ul li {
-  margin: 1em 0;
-}
-
-.numbers ul li strong {
-  font-size: 2.5em;
-}
-
-.numbers ul li span {
-  display: block;
+  background-position-x: 500px;
 }
 
 @media (min-width: 1200px) {
   .aplication {
-    height: 60vh;
     max-width: 100vw;
     overflow: hidden;
     background-color: #f9f9f9;
@@ -96,6 +121,9 @@
   }
   .aplication .about__text {
     padding-top: 4em !important;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-right: 5em;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -109,25 +137,6 @@
     height: 100%;
     background-attachment: fixed;
     background-position: 25% 60%;
-  }
-  .numbers ul {
-    padding-left: 12em;
-  }
-  .numbers li {
-    position: relative;
-  }
-  .numbers li::before {
-    content: "";
-    position: absolute;
-    height: 100%;
-    width: 2px;
-    border-radius: 3px;
-    right: 6em;
-    bottom: 0;
-    background-color: #ebebeb;
-  }
-  .numbers li:nth-last-child(1)::before {
-    display: none;
   }
 }
 /*# sourceMappingURL=Aplication.css.map */

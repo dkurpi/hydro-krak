@@ -37,5 +37,11 @@ p {
 .menubgc {
   width: 100%;
   height: 8em;
-  background-color: #484848;
+  background-color: rgb(44, 44, 44);
+}
+
+@media (max-width: 800px) {
+  .menubgc {
+    height: 5.56em;
+  }
 }

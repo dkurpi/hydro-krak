@@ -41,7 +41,7 @@ export default function Menu(props) {
               onClick={() => setTimeout(() => props.scrollTo("header"), 100)}
               to="/"
             >
-              Start
+              Home
             </LinkRouter>
           </li>
           <li
@@ -62,12 +62,10 @@ export default function Menu(props) {
             }}
           >
             <LinkRouter
-              onClick={() =>
-                setTimeout(() => props.scrollTo("realizations"), 100)
-              }
-              to="/"
+              onClick={() => setTimeout(() => props.scrollToTop(), 100)}
+              to="/galeria"
             >
-              Realizacje
+              Galeria
             </LinkRouter>
           </li>
           <li

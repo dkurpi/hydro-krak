@@ -1,6 +1,7 @@
 .partners {
   text-align: center;
-  padding: 2em 0 !important;
+  margin-top: -10vh;
+  margin-bottom: 5vh;
 }
 
 .partners-logo {
@@ -28,9 +29,7 @@
 
 @media (min-width: 800px) {
   .partners {
-    margin-top: 4em;
     text-align: center;
-    padding: 2em 0 !important;
   }
   .partners-logo {
     display: -ms-grid;
