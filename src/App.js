@@ -3,6 +3,7 @@ import Menu from "./Components/Menu-1/Menu";
 import MenuIndicators from "./Components/Menu-indicators/MenuIndicators.js";
 import Header from "./Components/Header-Philogic/Header";
 import Offer from "./Components/Offer-1/Offer";
+import OfferRellax from "./Components/Offer-rellax/OfferRellax";
 import About from "./Components/About-1/About";
 import Aplication from "./Components/Aplication/Aplication";
 import Realizations from "./Components/Realizations-1/Realizations";
@@ -20,6 +21,7 @@ import gsap from "gsap";
 import "aos/dist/aos.css";
 import AOS from "aos";
 
+
 ////////SCROLL
 import { Events, animateScroll as scroll, scroller } from "react-scroll";
 
@@ -28,6 +30,7 @@ class App extends Component {
   vh = 0;
 
   componentDidMount() {
+
     this.vh = window.innerHeight;
     // if (vh < 800) vh = 1200;
     console.log(this.vh);
@@ -75,7 +78,7 @@ class App extends Component {
     console.log(fromTop);
     const navbar = document.querySelector(".nav");
     if (!navbar) return;
-    if (fromTop > this.vh * 0.8) {
+    if (fromTop > 20) {
       navbar.classList.add("fixed");
     } else navbar.classList.remove("fixed");
   };
@@ -119,6 +122,7 @@ class App extends Component {
             />
             <Header vh={this.vh} />
             <Offer />
+            {/* <OfferRellax /> */}
             <About />
             <Realizations />
             <Partners />

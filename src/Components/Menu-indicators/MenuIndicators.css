@@ -1,4 +1,5 @@
 .fixedMenu {
+  display: none;
   color: #2c2c2c;
   font-weight: 500;
   position: fixed;
@@ -22,6 +23,12 @@
   transition: 0.2s;
 }
 
+.fixedMenu .dot.dot--small {
+  -webkit-transform: scale(0.7) !important;
+          transform: scale(0.7) !important;
+  border-radius: 5px !important;
+}
+
 .fixedMenu .active .dot {
   background-color: #028fcc;
   border: none;
@@ -29,8 +36,15 @@
           transform: scale(1.6);
 }
 
+.fixedMenu .active .dot.dot--small {
+  background-color: #028fcc;
+  -webkit-transform: scale(0.7) !important;
+          transform: scale(0.7) !important;
+}
+
 @media (min-width: 800px) {
   .fixedMenu {
+    display: block;
     left: 20px;
     margin: 10px;
   }

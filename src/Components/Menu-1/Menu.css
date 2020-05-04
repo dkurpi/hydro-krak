@@ -95,4 +95,78 @@ nav.fixed .logo h1 span {
 nav.fixed .options ul li a {
   font-size: 1em;
 }
+
+nav .hamburger {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  nav {
+    padding: 2em 1em;
+  }
+  nav .logo {
+    z-index: 99;
+  }
+  nav .logo h1 {
+    font-size: 1.5em;
+  }
+  nav .options {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 10em 5em;
+    opacity: 0;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    pointer-events: none;
+  }
+  nav .options.active {
+    background-color: #202020;
+    opacity: 1;
+    pointer-events: auto;
+  }
+  nav .options ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  nav .options ul li {
+    width: 100%;
+  }
+  nav .options ul li a {
+    color: #ffffffd3;
+    font-weight: 400;
+    padding: 0.3em 0;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  nav.fixed {
+    padding: 1.2em 1em;
+  }
+  nav.fixed .options ul li a {
+    font-size: 1.2em;
+  }
+  nav.fixed .logo h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em;
+  }
+  nav.fixed .logo h1 span {
+    font-weight: 400;
+    color: #2eb9f5;
+  }
+  nav .hamburger {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    display: block;
+  }
+}
 /*# sourceMappingURL=Menu.css.map */

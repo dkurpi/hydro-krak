@@ -3,8 +3,6 @@ nav {
   z-index: 100;
   width: 100vw;
   box-sizing: border-box;
-  // color: white;
-
   color: rgb(255, 255, 255);
   display: flex;
   justify-content: space-between;
@@ -76,6 +74,85 @@ nav {
           }
         }
       }
+    }
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  nav {
+    padding: 2em 1em;
+    .logo {
+      z-index: 99;
+      h1 {
+        font-size: 1.5em;
+      }
+    }
+
+    .options {
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      padding: 10em 5em;
+      opacity: 0;
+      transition: 0.5s ease-in-out;
+      pointer-events: none;
+      &.active {
+        background-color: #202020;
+        opacity: 1;
+      pointer-events: auto;
+
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        li {
+          width: 100%;
+          a {
+            color: #ffffffd3;
+            font-weight: 400;
+            padding: 0.3em 0;
+            font-size: 1.2em;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+          }
+        }
+      }
+    }
+
+    &.fixed {
+      padding: 1.2em 1em;
+      .options {
+        ul {
+          li {
+            a {
+              font-size: 1.2em;
+            }
+          }
+        }
+      }
+      .logo {
+        h1 {
+          margin: 0;
+          padding: 0;
+          font-size: 1.2em;
+          span {
+            font-weight: 400;
+            color: #2eb9f5;
+          }
+        }
+      }
+    }
+
+    .hamburger {
+      align-self: center;
+      display: block;
     }
   }
 }

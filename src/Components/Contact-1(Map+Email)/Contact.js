@@ -57,22 +57,22 @@ export default class Contact extends Component {
   render() {
     const { name, surname, tel, email, message } = this.state;
     return (
-      <Element name="contact">
-        <section class="contact">
-          <div className="job ">
-            <div className="container">
-              <div className="job__text">
-                <h3>Chciałbyś z nami pracować?</h3>
-                <p>
-                  Stworzyliśmy zespół najlepszych fachowców, stawiamy jednak na
-                  ciągły rozwój.
-                </p>
-              </div>
-              <a className="button" href="#">
-                <div>Dowiedz się wiecej</div>
-              </a>
+      <section class="contact">
+        <div className="job ">
+          <div className="container">
+            <div className="job__text">
+              <h3>Chciałbyś z nami pracować?</h3>
+              <p>
+                Stworzyliśmy zespół najlepszych fachowców, stawiamy jednak na
+                ciągły rozwój.
+              </p>
             </div>
+            <a className="button" href="#">
+              <div>Dowiedz się wiecej</div>
+            </a>
           </div>
+        </div>
+        <Element name="contact">
           <div className="map">
             <iframe
               className="google-map map-section__map"
@@ -162,8 +162,8 @@ export default class Contact extends Component {
               </div>
             </div>
           </div>
-        </section>
-      </Element>
+        </Element>
+      </section>
     );
   }
 }
