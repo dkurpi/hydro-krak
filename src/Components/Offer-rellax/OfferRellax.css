@@ -1,0 +1,115 @@
+.offer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 3em auto 3em !important;
+  letter-spacing: 0;
+}
+
+.offer .offer__text {
+  padding-top: 2em;
+  text-align: center;
+  font-size: 15px;
+}
+
+@media (min-width: 800px) {
+  .offer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .offer .offer__text {
+    padding-top: 2em;
+    margin-bottom: 2em;
+    text-align: center;
+    font-size: 15px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .offer__card {
+    background-color: #ffffff;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: 0 auto;
+  }
+  .offer__card h2 {
+    letter-spacing: 0;
+  }
+  .offer__card h2:after {
+    content: "";
+    position: absolute;
+    top: 1.5em;
+    left: 13%;
+    background-color: #028fcc;
+    height: 2px;
+    width: 5em;
+  }
+  .offer__card .offer__card-img {
+    height: 65vh;
+    width: 85vh;
+  }
+  .offer__card .offer__card-img img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 100%;
+    height: 100%;
+    -webkit-box-shadow: 0 35px 35px -25px rgba(0, 0, 0, 0.322);
+            box-shadow: 0 35px 35px -25px rgba(0, 0, 0, 0.322);
+  }
+  .offer__card .offer__card-text {
+    width: 30vw;
+    background-color: white;
+    padding: 2em 3.4em;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    margin-top: 46vh;
+    margin-left: -10em;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    color: black;
+    -webkit-box-shadow: 35px 35px 15px -25px rgba(0, 0, 0, 0.171);
+            box-shadow: 35px 35px 15px -25px rgba(0, 0, 0, 0.171);
+  }
+  .offer__card .offer__card-text p {
+    line-height: 1.5em !important;
+    margin: 2.3em 0;
+  }
+  .offer__card .offer__card-text .btn {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #028fcc;
+    border: 1px solid #028fcc;
+    padding: 1em;
+    margin-bottom: 1em;
+    background-color: #028fcc;
+    color: white;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .offer__card .offer__card-text .btn:hover {
+    background-color: #028fcca9;
+  }
+}
+/*# sourceMappingURL=OfferRellax.css.map */
