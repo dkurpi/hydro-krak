@@ -8,6 +8,7 @@ export default function Menu(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [isClicked, setiIsClicked] = useState(false);
   const mobileNav = useRef(null);
+
   const handleHamburger = () => {
     if (mobileNav && !isClicked) {
       setIsOpen((prev) => !prev);
@@ -18,21 +19,23 @@ export default function Menu(props) {
       setTimeout(() => setiIsClicked(false), 1000);
     }
   };
+
   return (
-    <nav className="nav ">
-      <div className="logo">
+    <nav className="navigation">
+      <div className="navigation__logo">
         <LinkRouter
           to="/"
           onClick={() => setTimeout(() => props.scrollToTop(), 100)}
         >
-          <h1>
-            <span>HYDRO</span>KRAK
+          <h1 className="navigation__logo-main">
+            <span className="navigation__logo-secondary">HYDRO</span>KRAK
           </h1>
         </LinkRouter>
       </div>
-      <div className={`options ${isOpen && "active"}`}>
-        <ul ref={mobileNav}>
+      <div className={`navigation__options ${isOpen ? "navigation__options--active" : ""}`}>
+        <ul className="navigation__list" ref={mobileNav}>
           <li
+            className="navigation__list-item"
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
@@ -45,6 +48,7 @@ export default function Menu(props) {
             </LinkRouter>
           </li>
           <li
+            className="navigation__list-item"
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
@@ -57,6 +61,7 @@ export default function Menu(props) {
             </LinkRouter>
           </li>
           <li
+            className="navigation__list-item"
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
@@ -69,6 +74,7 @@ export default function Menu(props) {
             </LinkRouter>
           </li>
           <li
+            className="navigation__list-item"
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
@@ -81,6 +87,7 @@ export default function Menu(props) {
             </LinkRouter>
           </li>
           <li
+            className="navigation__list-item"
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
@@ -93,6 +100,7 @@ export default function Menu(props) {
             </LinkRouter>
           </li>
           <li
+            className="navigation__list-item"
             onClick={() => {
               setIsOpen((prev) => !prev);
             }}
@@ -107,7 +115,7 @@ export default function Menu(props) {
         </ul>
       </div>
 
-      <div className="hamburger">
+      <div className="navigation__hamburger">
         <HamburgerMenu
           isOpen={isOpen}
           menuClicked={() => {

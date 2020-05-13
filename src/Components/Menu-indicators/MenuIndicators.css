@@ -1,4 +1,4 @@
-.fixedMenu {
+.scrollMenu {
   display: none;
   color: #2c2c2c;
   font-weight: 500;
@@ -12,7 +12,7 @@
   transition: 0.5s;
 }
 
-.fixedMenu .dot {
+.scrollMenu__dot {
   cursor: pointer;
   height: 8px;
   width: 8px;
@@ -23,32 +23,32 @@
   transition: 0.2s;
 }
 
-.fixedMenu .dot.dot--small {
+.scrollMenu__dot--small {
   -webkit-transform: scale(0.7) !important;
           transform: scale(0.7) !important;
   border-radius: 5px !important;
 }
 
-.fixedMenu .active .dot {
+.scrollMenu--active .scrollMenu__dot {
   background-color: #028fcc;
   border: none;
   -webkit-transform: scale(1.6);
           transform: scale(1.6);
 }
 
-.fixedMenu .active .dot.dot--small {
+.scrollMenu--active .scrollMenu__dot--small {
   background-color: #028fcc;
   -webkit-transform: scale(0.7) !important;
           transform: scale(0.7) !important;
 }
 
 @media (min-width: 800px) {
-  .fixedMenu {
+  .scrollMenu {
     display: block;
     left: 20px;
     margin: 10px;
   }
-  .fixedMenu .dot {
+  .scrollMenu__dot {
     height: 12px;
     width: 12px;
   }

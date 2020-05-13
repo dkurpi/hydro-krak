@@ -24,9 +24,9 @@ export default function MenuIndicators(props) {
   const offset = Math.floor(-props.vh * 0.2);
 
   return (
-    <div ref={wrapper} className="fixedMenu">
+    <div ref={wrapper} className="scrollMenu">
       <Link
-        activeClass="active nodisplay"
+        activeClass="scrollMenu--active nodisplay"
         to="header"
         spy={true}
         smooth={true}
@@ -35,10 +35,10 @@ export default function MenuIndicators(props) {
         onSetActive={() => handleVisibilityMenu(false)}
         onSetInactive={() => handleVisibilityMenu(true)}
       >
-        <div className="dot"></div>
+        <div className="scrollMenu__dot"></div>
       </Link>
       <Link
-        activeClass="active"
+        activeClass="scrollMenu--active"
         to="offer"
         spy={true}
         smooth={true}
@@ -47,10 +47,10 @@ export default function MenuIndicators(props) {
         onSetActive={() => console.log("active")}
         onSetInactive={() => console.log("no-active")}
       >
-        <div className="dot"></div>
+        <div className="scrollMenu__dot"></div>
       </Link>
       <Link
-        activeClass="active"
+        activeClass="scrollMenu--active"
         to="about"
         spy={true}
         smooth={true}
@@ -60,10 +60,10 @@ export default function MenuIndicators(props) {
         onSetActive={() => console.log("active")}
         onSetInactive={() => console.log("no-active")}
       >
-        <div className="dot"></div>
+        <div className="scrollMenu__dot"></div>
       </Link>
       <Link
-        activeClass="active"
+        activeClass="scrollMenu--active"
         to="realizations"
         spy={true}
         smooth={true}
@@ -72,10 +72,10 @@ export default function MenuIndicators(props) {
         onSetActive={() => console.log("active")}
         onSetInactive={() => console.log("no-active")}
       >
-        <div className="dot"></div>
+        <div className="scrollMenu__dot"></div>
       </Link>
       <Link
-        activeClass="active"
+        activeClass="scrollMenu--active"
         to="contact"
         spy={true}
         smooth={true}
@@ -84,7 +84,7 @@ export default function MenuIndicators(props) {
         onSetActive={() => console.log("active")}
         onSetInactive={() => console.log("no-active")}
       >
-        <div className="dot"></div>
+        <div className="scrollMenu__dot"></div>
       </Link>
       {/* <li onClick={props.scrollToTop}>top</li> */}
     </div>

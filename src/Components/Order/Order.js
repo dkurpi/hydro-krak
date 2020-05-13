@@ -81,7 +81,8 @@ export default function Order(props) {
 
   return (
     <Element name="realizations">
-      <div className="real container realization">
+      <div className="menubgc"></div>
+      <div className="realization container ">
         <div data-aos="fade-right" className="realization__text">
           <h2>TU JAKIŚ TEKST</h2>
           <p>

@@ -3,52 +3,27 @@
   display: flex;
   flex-direction: column;
 
-  .about__text {
+  &__text {
     padding: 1.5em;
     margin-bottom: 1em;
   }
 
-  .about__img {
+  &__img {
     background-image: url("/images/company.jpg");
     background-size: cover;
     height: 40vh;
     width: 100vw;
-  }
-
-  .numbers {
-    color: #f4f4f4;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 0 2em;
-    background-color: #028fcc;
-    ul {
-      max-width: 1200px;
-      list-style: none;
-      padding: 1.7em 0;
-      margin: 0 auto;
-
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
-
-      li {
-        margin: 1em 0;
-        strong {
-          font-size: 1.4em;
-        }
-        span {
-          display: block;
-        }
-      }
-    }
   }
 }
 
 .numbers {
   flex-basis: 100%;
   color: #f4f4f4;
-  margin
   padding: 0 2em;
   background-color: #028fcc;
-  ul {
+  $self: &;
+
+  &__list {
     max-width: 1200px;
     list-style: none;
     padding: 1.7em 0;
@@ -57,12 +32,12 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
 
-    li {
+    #{ $self }__item {
       margin: 1em 0;
-      strong {
+      &-number {
         font-size: 2.5em;
       }
-      span {
+      &-description {
         display: block;
       }
     }
@@ -77,17 +52,16 @@
     background-color: #f9f9f9;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    .about__text {
+    &__text {
       padding-top: 4em !important;
       align-items: flex-start;
       margin-bottom: 1em;
       margin-left: 30% !important;
-      p {
-        text-align: left;
-      }
     }
-
-    .about__img {
+    &__paragraph {
+      text-align: left;
+    }
+    &__img {
       height: 100%;
       background-attachment: fixed;
       background-position: 25% 60%;
@@ -95,10 +69,12 @@
   }
 
   .numbers {
-    ul {
+    $self: &;
+
+    &__list {
       padding-left: 12em;
     }
-    li {
+    #{ $self }__item {
       position: relative;
 
       &::before {
@@ -112,7 +88,7 @@
         background-color: #ebebeb;
       }
     }
-    li:nth-last-child(1) {
+    &__item:nth-last-child(1) {
       &::before {
         display: none;
       }

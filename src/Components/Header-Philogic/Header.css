@@ -1,4 +1,4 @@
-.main-header {
+.header {
   height: 100vh;
   width: 100vw;
   background-image: url("/images/header2.jpg");
@@ -21,7 +21,7 @@
   position: relative;
 }
 
-.main-header .callback {
+.header__text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,24 +33,24 @@
   padding: 3em;
 }
 
-.main-header .callback h1 {
+.header__text-main {
   font-weight: 600;
   font-size: 1.7em;
   margin: 0.6em;
 }
 
-.main-header .callback h1 span {
+.header__text-main span {
   color: #028fcc;
 }
 
-.main-header .callback .text {
+.header__text-secondary {
   font-weight: 300;
   font-size: 6;
   margin: 0.2em;
   font-size: 15px;
 }
 
-.main-header .callback .button {
+.header__text-button {
   font-family: montserrat;
   background-color: transparent;
   color: white;
@@ -73,12 +73,12 @@
   cursor: pointer;
 }
 
-.main-header .callback .button:hover {
+.header__text-button:hover {
   background-color: #fff;
   color: #3a3a3a;
 }
 
-.main-header .icon {
+.header__icon {
   justify-self: flex-end;
   position: absolute;
   bottom: 20px;
@@ -88,18 +88,18 @@
 }
 
 @media (min-width: 800px) {
-  .main-header {
+  .header {
     background-attachment: fixed;
   }
-  .main-header .callback {
+  .header__text {
     padding: 3em;
   }
-  .main-header .callback h1 {
+  .header__text-main {
     font-weight: 600;
     font-size: 3em;
-    margin: .2em;
+    margin: 0.2em;
   }
-  .main-header .callback .text {
+  .header__text-secondary {
     font-size: 15px;
   }
 }

@@ -1,7 +1,3 @@
-.real {
-  text-align: center;
-}
-
 .realization {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -15,7 +11,7 @@
           align-items: flex-start;
 }
 
-.realization .realization__text {
+.realization__text {
   padding-top: 2em;
   text-align: center;
   font-size: 15px;
@@ -24,12 +20,12 @@
   margin-right: auto;
 }
 
-.realization .realization__text p {
+.realization__text p {
   line-height: 20px;
   font-size: 15px;
 }
 
-.realization .realization__cards {
+.realization__cards {
   font-size: 15px;
   margin-bottom: 20vh;
 }
@@ -49,15 +45,15 @@
   margin: 1em 0;
 }
 
-.realization .card_img-wrapper {
-  overflow: hidden;
-}
-
 .realization .card__img {
   width: 100%;
   cursor: pointer;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+}
+
+.realization .card__img-wrapper {
+  overflow: hidden;
 }
 
 .realization .card__img:hover {
@@ -115,13 +111,13 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .realization .realization__text {
+  .realization__text {
     padding-top: 4em;
     text-align: center;
     font-size: 16px;
     padding-bottom: 4em;
   }
-  .realization .realization__cards {
+  .realization__cards {
     font-size: 15px;
     display: -ms-grid;
     display: grid;

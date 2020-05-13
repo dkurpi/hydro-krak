@@ -1,4 +1,4 @@
-.main-header {
+.header {
   height: 100vh;
   width: 100vw;
   background-image: url("/images/header2.jpg");
@@ -11,12 +11,12 @@
   text-transform: uppercase;
   position: relative;
 
-  .callback {
+  &__text {
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 3em;
-    h1 {
+    &-main {
       font-weight: 600;
       font-size: 1.7em;
       margin: 0.6em;
@@ -25,13 +25,13 @@
       }
     }
 
-    .text {
+    &-secondary {
       font-weight: 300;
       font-size: 6;
       margin: 0.2em;
       font-size: 15px;
     }
-    .button {
+    &-button {
       font-family: montserrat;
       background-color: transparent;
       color: white;
@@ -55,7 +55,7 @@
     }
   }
 
-  .icon {
+  &__icon {
     justify-self: flex-end;
     position: absolute;
     bottom: 20px;
@@ -65,18 +65,18 @@
 }
 
 @media (min-width: 800px) {
-  .main-header {
-  background-attachment: fixed;
+  .header {
+    background-attachment: fixed;
 
-    .callback {
+    &__text {
       padding: 3em;
-      h1 {
+      &-main {
         font-weight: 600;
         font-size: 3em;
-        margin: .2em;
+        margin: 0.2em;
       }
 
-      .text {
+      &-secondary {
         font-size: 15px;
       }
     }

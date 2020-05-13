@@ -58,11 +58,11 @@ export default class Contact extends Component {
     const { name, surname, tel, email, message } = this.state;
     return (
       <section class="contact">
-        <div className="job ">
+        <div className="job">
           <div className="container">
             <div className="job__text">
-              <h3>Chciałbyś z nami pracować?</h3>
-              <p>
+              <h3 className="job__text-main">Chciałbyś z nami pracować?</h3>
+              <p className="job__text-paragraph">
                 Stworzyliśmy zespół najlepszych fachowców, stawiamy jednak na
                 ciągły rozwój.
               </p>
@@ -71,7 +71,7 @@ export default class Contact extends Component {
               onClick={() => setTimeout(() => this.props.scrollToTop(), 100)}
               to="/aplikuj"
             >
-              <a className="button" href="#">
+              <a className="job__button" href="#">
                 <div>Dowiedz się wiecej</div>
               </a>
             </LinkRouter>
@@ -80,7 +80,7 @@ export default class Contact extends Component {
         <Element name="contact">
           <div className="map">
             <iframe
-              className="google-map map-section__map"
+              className="google-map map__google"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.8624299081425!2d20.03673031571763!3d50.07013797942464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716451a9e3db903%3A0xc49aafa53df7e897!2sOsiedle%20Centrum%20E%2016%2C%2031-934%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1588021806425!5m2!1spl!2spl"
               frameborder="0"
               style={{ border: 0 }}
@@ -89,9 +89,8 @@ export default class Contact extends Component {
               tabindex="0"
             ></iframe>
           </div>
-
           <div className="contacts container">
-            <div className="contacts-form">
+            <form className="contacts__form">
               <h2>Darmowa wycena</h2>
               <input
                 onChange={(e) => {
@@ -137,11 +136,14 @@ export default class Contact extends Component {
               <p style={{ fontSize: "12px", alignSelf: "start" }}>
                 * - pola wymagane
               </p>
-              <div onClick={() => console.log("click")} className="button">
+              <div
+                onClick={() => console.log("click")}
+                className="contacts__form-button"
+              >
                 <ButtonUI handleSend={this.handleBtn} />
               </div>
-            </div>
-            <div className="contacts-info">
+            </form>
+            <div className="contacts__info">
               <h1>
                 <span>HYDRO</span> KRAK
               </h1>

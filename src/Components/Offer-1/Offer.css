@@ -29,17 +29,17 @@ h2:after {
           align-items: flex-start;
 }
 
-.offer .offer__text {
+.offer__text {
   padding-top: 2em;
   text-align: center;
   font-size: 15px;
 }
 
-.offer .offer__cards {
+.offer__cards {
   font-size: 15px;
 }
 
-.offer .card {
+.card {
   color: #5e5e5e;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,24 +52,24 @@ h2:after {
   margin: 1em 0;
 }
 
-.offer .card__img {
+.card__img {
   width: 100%;
 }
 
-.offer .card__text {
+.card__text {
   padding: 0 1.5em 2em;
 }
 
-.offer .card__text h4 {
+.card__text-main {
   margin: 1em 0.5em 0.5em;
 }
 
-.offer .card__text ul {
+.card__list {
   padding: 0;
   list-style: none;
 }
 
-.offer .card__text ul li {
+.card__list-item {
   font-weight: 400;
   font-size: 0.9em;
   margin: 0.1em;
@@ -77,7 +77,7 @@ h2:after {
   position: relative;
 }
 
-.offer .card__text ul li:before {
+.card__list-item:before {
   content: "";
   position: absolute;
   border-radius: 50%;
@@ -120,7 +120,7 @@ h2:after {
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .offer .offer__text {
+  .offer__text {
     padding-top: 2em;
     margin-bottom: 2em;
     text-align: center;
@@ -129,14 +129,14 @@ h2:after {
     margin-left: auto;
     margin-right: auto;
   }
-  .offer .offer__cards {
+  .offer__cards {
     font-size: 15px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
-  .offer .card {
+  .card {
     color: #5e5e5e;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -150,28 +150,31 @@ h2:after {
             box-shadow: 0 35px 35px -25px rgba(10, 10, 10, 0.1);
     margin: 1em 0.5em;
   }
-  .offer .card__img {
+  .card__img {
     width: 100%;
   }
-  .offer .card__text {
+  .card__img-wrapper {
+    overflow: hidden;
+  }
+  .card__text {
     padding: 0.2em 2em 1em;
   }
-  .offer .card__text h4 {
+  .card__text-main {
     margin: 1em 1em 0.5em 0.5em;
     font-size: 1.05em;
   }
-  .offer .card__text ul {
+  .card__list {
     padding: 0;
     list-style: none;
   }
-  .offer .card__text ul li {
+  .card__list-item {
     font-weight: 400;
     font-size: 0.9em;
     margin: 0.1em;
     margin-left: 2em;
     position: relative;
   }
-  .offer .card__text ul li:before {
+  .card__list-item:before {
     content: "";
     position: absolute;
     border-radius: 50%;

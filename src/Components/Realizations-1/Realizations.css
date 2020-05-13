@@ -1,8 +1,5 @@
-.real {
-  text-align: center;
-}
-
 .realization {
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -15,7 +12,7 @@
           align-items: flex-start;
 }
 
-.realization .realization__text {
+.realization__text {
   padding-top: 2em;
   text-align: center;
   font-size: 15px;
@@ -24,81 +21,14 @@
   margin-right: auto;
 }
 
-.realization .realization__text p {
+.realization__text-paragraph {
   line-height: 20px;
   font-size: 15px;
 }
 
-.realization .realization__cards {
+.realization__cards {
   font-size: 15px;
-}
-
-.realization .card {
-  color: #5e5e5e;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-color: #f4f4f4;
-  margin: 1em 0;
-}
-
-.realization .card_img-wrapper {
-  overflow: hidden;
-}
-
-.realization .card__img {
-  width: 100%;
-  cursor: pointer;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
-}
-
-.realization .card__img:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
-}
-
-.realization .card__text {
-  padding: 0 1.5em 2em;
-}
-
-.realization .card__text h4 {
-  margin: 0;
-  padding: 0;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.realization .card__text ul {
-  padding: 0;
-  list-style: none;
-}
-
-.realization .card__text ul li {
-  font-weight: 400;
-  font-size: 0.9em;
-  margin: 0.1em;
-  margin-left: 2em;
-  position: relative;
-}
-
-.realization .card__text ul li:before {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  top: 50%;
-  left: -20px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: 0.5em;
-  width: 0.5em;
-  background-color: #5e5e5e;
+  margin-bottom: 20vh;
 }
 
 @media (min-width: 800px) {
@@ -114,28 +44,18 @@
         -ms-flex-align: start;
             align-items: flex-start;
   }
-  .realization .realization__text {
+  .realization__text {
     padding-top: 4em;
     text-align: center;
     font-size: 16px;
     padding-bottom: 4em;
   }
-  .realization .realization__cards {
+  .realization__cards {
     font-size: 15px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
-  }
-  .realization .card {
-    color: #393939;
-    -webkit-box-shadow: 0 35px 35px -25px rgba(10, 10, 10, 0.1);
-            box-shadow: 0 35px 35px -25px rgba(10, 10, 10, 0.1);
-    margin: 1em 1em;
-  }
-  .realization .card__text {
-    padding: 0 2em 2em;
-    text-align: left;
   }
 }
 /*# sourceMappingURL=Realizations.css.map */

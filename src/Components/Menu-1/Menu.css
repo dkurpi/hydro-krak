@@ -1,4 +1,4 @@
-nav {
+.navigation {
   position: fixed;
   z-index: 100;
   width: 100vw;
@@ -16,12 +16,12 @@ nav {
   transition: 0.6s;
 }
 
-nav .logo {
+.navigation__logo {
   -ms-flex-item-align: end;
       align-self: flex-end;
 }
 
-nav .logo h1 {
+.navigation__logo-main {
   margin: 0;
   padding: 0;
   font-size: 2.6em;
@@ -29,18 +29,18 @@ nav .logo h1 {
   transition: 0.2s;
 }
 
-nav .logo h1 span {
+.navigation__logo-secondary {
   font-weight: 400;
   color: #2eb9f5;
 }
 
-nav .options {
+.navigation__options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav .options ul {
+.navigation__list {
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -50,14 +50,14 @@ nav .options ul {
       align-self: flex-end;
 }
 
-nav .options ul li {
+.navigation__list-item {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-nav .options ul li a {
+.navigation__list-item a {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
@@ -72,45 +72,45 @@ nav .options ul li a {
   transition: 0.2s;
 }
 
-nav .options ul li a:hover {
+.navigation__list-item a:hover {
   color: #2eb9f5;
 }
 
-nav.fixed {
+.navigation--fixed {
   background-color: #2c2c2c;
   padding: 1em 5em;
 }
 
-nav.fixed .logo h1 {
+.navigation--fixed .navigation__logo-main {
   margin: 0;
   padding: 0;
   font-size: 2em;
 }
 
-nav.fixed .logo h1 span {
+.navigation--fixed .navigation__logo-main-secondary {
   font-weight: 400;
   color: #2eb9f5;
 }
 
-nav.fixed .options ul li a {
+.navigation--fixed .navigation__options__list-item a {
   font-size: 1em;
 }
 
-nav .hamburger {
+.navigation__hamburger {
   display: none;
 }
 
 @media (max-width: 800px) {
-  nav {
+  .navigation {
     padding: 2em 1em;
   }
-  nav .logo {
+  .navigation__logo {
     z-index: 99;
   }
-  nav .logo h1 {
+  .navigation__logo-main {
     font-size: 1.5em;
   }
-  nav .options {
+  .navigation__options {
     position: fixed;
     top: 0;
     left: 0;
@@ -122,12 +122,12 @@ nav .hamburger {
     transition: 0.5s ease-in-out;
     pointer-events: none;
   }
-  nav .options.active {
+  .navigation__options--active {
     background-color: #202020;
     opacity: 1;
     pointer-events: auto;
   }
-  nav .options ul {
+  .navigation__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -136,10 +136,10 @@ nav .hamburger {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  nav .options ul li {
+  .navigation__list-item {
     width: 100%;
   }
-  nav .options ul li a {
+  .navigation__list-item a {
     color: #ffffffd3;
     font-weight: 400;
     padding: 0.3em 0;
@@ -147,22 +147,22 @@ nav .hamburger {
     text-transform: uppercase;
     letter-spacing: 2px;
   }
-  nav.fixed {
+  .navigation--fixed {
     padding: 1.2em 1em;
   }
-  nav.fixed .options ul li a {
+  .navigation--fixed .navigation__options__list-item a {
     font-size: 1.2em;
   }
-  nav.fixed .logo h1 {
+  .navigation--fixed .navigation__logo-main {
     margin: 0;
     padding: 0;
     font-size: 1.2em;
   }
-  nav.fixed .logo h1 span {
+  .navigation--fixed .navigation__logo-secondary {
     font-weight: 400;
     color: #2eb9f5;
   }
-  nav .hamburger {
+  .navigation__hamburger {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;

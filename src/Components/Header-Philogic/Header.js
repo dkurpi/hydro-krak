@@ -8,13 +8,13 @@ import { Link } from "react-scroll";
 export default function Header(props) {
   return (
     <Element name="header">
-      <header className="main-header">
-        <div className="callback">
-          <h1>
+      <header className="header">
+        <div className="header__text">
+          <h1 className="header__text-main">
             <span>Profesjonalne</span> <br />
             usługi HYDRAULICZNE
           </h1>
-          <span className="text">
+          <span className="header__text-secondary">
             DZIAŁAMY W KRAKOWIE ORAZ NA POZOSTAŁYM OBSZARZE WOJ. MAŁOPOLSKIEGO
           </span>
 
@@ -26,7 +26,7 @@ export default function Header(props) {
             duration={500}
             offset={-props.vh * 0.1}
           >
-            <div class="button">ZOBACZ WIĘCEJ</div>
+            <div class="header__text-button">ZOBACZ WIĘCEJ</div>
           </Link>
         </div>
         <Link
@@ -38,8 +38,7 @@ export default function Header(props) {
           offset={-props.vh * 0.1}
         >
           <Icon
-            className="icon"
-            c
+            className="header__icon"
             icon={arrowDownAlt2}
             style={{ color: "#c4c4c4", fontSize: "53px" }}
           />

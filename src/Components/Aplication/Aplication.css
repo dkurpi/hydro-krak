@@ -13,12 +13,12 @@
   left: 2.5em;
 }
 
-.aplication .about__text {
+.aplication__text {
   padding: 1.5em;
   margin-bottom: 1em;
 }
 
-.aplication .about__text .contacts-form {
+.aplication__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -29,8 +29,8 @@
   margin: 3em 0 0;
 }
 
-.aplication .about__text .contacts-form input,
-.aplication .about__text .contacts-form textarea {
+.aplication__form input,
+.aplication__form textarea {
   padding: 1.1em 1.5em;
   font-family: montserrat;
   border: 0;
@@ -39,12 +39,12 @@
   border-radius: 0.5em;
 }
 
-.aplication .about__text .contacts-form input:focus,
-.aplication .about__text .contacts-form textarea:focus {
+.aplication__form input:focus,
+.aplication__form textarea:focus {
   color: black;
 }
 
-.aplication .about__text .contacts-form .button {
+.aplication__form__button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,51 +57,7 @@
           align-items: center;
 }
 
-.aplication .about__text .contacts-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-bottom: 2em;
-}
-
-.aplication .about__text .contacts-info h1 {
-  font-size: 2em;
-}
-
-.aplication .about__text .contacts-info h1 span {
-  font-weight: 400;
-  color: #028fcc;
-}
-
-.aplication .about__text .contacts-info h1,
-.aplication .about__text .contacts-info h2 {
-  margin: 0.2em 0;
-}
-
-.aplication .about__text .contacts-info h2:after {
-  display: none;
-}
-
-.aplication .about__text .contacts-info .destination {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.aplication .about__text .contacts-info .info2 {
-  text-align: left;
-  padding: 1em 0;
-  line-height: 1.4em;
-}
-
-.aplication .about__img {
+.aplication__img {
   background-image: url("/images/company.jpg");
   background-size: cover;
   height: 40vh;
@@ -119,7 +75,7 @@
     -ms-grid-columns: (50%)[2];
         grid-template-columns: repeat(2, 50%);
   }
-  .aplication .about__text {
+  .aplication__text {
     padding-top: 4em !important;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -130,10 +86,10 @@
     margin-bottom: 1em;
     margin-left: 30% !important;
   }
-  .aplication .about__text p {
+  .aplication__text p {
     text-align: left;
   }
-  .aplication .about__img {
+  .aplication__img {
     height: 100%;
     background-attachment: fixed;
     background-position: 25% 60%;

@@ -7,71 +7,35 @@
     left: 2.5em;
   }
 
-  .about__text {
+  &__text {
     padding: 1.5em;
     margin-bottom: 1em;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    margin: 3em 0 0;
+    input,
+    textarea {
+      padding: 1.1em 1.5em;
+      font-family: montserrat;
+      border: 0;
+      background-color: #f4f4f4;
+      margin: 0.3em 0;
+      border-radius: 0.5em;
 
-    .contacts-form {
-      display: flex;
-      flex-direction: column;
-      margin: 3em 0 0;
-
-      input,
-      textarea {
-        padding: 1.1em 1.5em;
-        font-family: montserrat;
-        border: 0;
-        background-color: #f4f4f4;
-        margin: 0.3em 0;
-        border-radius: 0.5em;
-
-        &:focus {
-          color: black;
-        }
-      }
-
-      .button {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+      &:focus {
+        color: black;
       }
     }
 
-    .contacts-info {
+    &__button {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 2em;
-
-      h1 {
-        font-size: 2em;
-        span {
-          font-weight: 400;
-          color: #028fcc;
-        }
-      }
-
-      h1,
-      h2 {
-        margin: 0.2em 0;
-      }
-      h2:after {
-        display: none;
-      }
-
-      .destination {
-        display: flex;
-      }
-
-      .info2 {
-        text-align: left;
-        padding: 1em 0;
-        line-height: 1.4em;
-      }
     }
   }
-
-  .about__img {
+  &__img {
     background-image: url("/images/company.jpg");
     background-size: cover;
     height: 40vh;
@@ -87,11 +51,10 @@
     background-color: #f9f9f9;
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    .about__text {
+    &__text {
       padding-top: 4em !important;
       box-sizing: border-box;
       padding-right: 5em;
-
       align-items: flex-start;
       margin-bottom: 1em;
       margin-left: 30% !important;
@@ -100,7 +63,7 @@
       }
     }
 
-    .about__img {
+    &__img {
       height: 100%;
       background-attachment: fixed;
       background-position: 25% 60%;

@@ -5,7 +5,7 @@ import Header from "./Components/Header-Philogic/Header";
 import Offer from "./Components/Offer-1/Offer";
 import OfferRellax from "./Components/Offer-rellax/OfferRellax";
 import About from "./Components/About-1/About";
-import Aplication from "./Components/Aplication/Aplication";
+import Job from "./Components/Aplication/Aplication";
 import Realizations from "./Components/Realizations-1/Realizations";
 import Partners from "./Components/Partners/Partners";
 import Contact from "./Components/Contact-1(Map+Email)/Contact";
@@ -29,20 +29,28 @@ import { Events, animateScroll as scroll, scroller } from "react-scroll";
 class App extends Component {
   state = { isLoaded: false };
   vh = 0;
-
   componentDidMount() {
+    this.configureAnimationSettings();
+    this.configurePageLoading();
+  }
+
+  componentWillUnmount() {
+    this.removeEvents();
+  }
+
+  configureAnimationSettings = () => {
     this.vh = window.innerHeight;
-    // if (vh < 800) vh = 1200;
-    console.log(this.vh);
     AOS.init({
       offset: this.vh * 0.3,
       duration: 1200,
     });
+  };
+
+  configurePageLoading = () => {
     setTimeout(() => {
       this.setState({ isLoaded: true });
       this.handleLoading();
     }, 1000);
-
     Events.scrollEvent.register("begin", function () {
       console.log("begin");
     });
@@ -52,12 +60,12 @@ class App extends Component {
     });
 
     window.addEventListener("scroll", this.handleScrolling);
-  }
+  };
 
-  componentWillUnmount() {
+  removeEvents = () => {
     Events.scrollEvent.remove("begin");
     Events.scrollEvent.remove("end");
-  }
+  };
 
   scrollToTop() {
     scroll.scrollToTop();
@@ -76,12 +84,11 @@ class App extends Component {
 
   handleScrolling = () => {
     const fromTop = window.scrollY;
-    console.log(fromTop);
-    const navbar = document.querySelector(".nav");
+    const navbar = document.querySelector(".navigation");
     if (!navbar) return;
     if (fromTop > 20) {
-      navbar.classList.add("fixed");
-    } else navbar.classList.remove("fixed");
+      navbar.classList.add("navigation--fixed");
+    } else navbar.classList.remove("navigation--fixed");
   };
 
   handleLoading = () => {
@@ -127,18 +134,13 @@ class App extends Component {
             <Partners />
             <Contact scrollToTop={this.scrollToTop} />
           </Route>
-          <Route exact path="/aplikuj">
-            <div className="menubgc"></div>
-            <Aplication />
-          </Route>
-          <Route exact path="/zamow">
-            <div className="menubgc"></div>
-            <Order />
-          </Route>
-          <Route exact path="/galeria">
-            <div className="menubgc"></div>
-            <Gallery scrollToTop={this.scrollToTop} />
-          </Route>
+          <Route exact path="/aplikuj" render={()=> <Job/>} />
+          <Route exact path="/zamow" render={Order} />
+          <Route
+            exact
+            path="/galeria"
+            render={() => <Gallery scrollToTop={this.scrollToTop} />}
+          />
         </Switch>
         <Footer />
       </Router>

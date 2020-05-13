@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import bxlFacebookCircle from "@iconify/icons-bx/bxl-facebook-circle";
 import mailIcon from "@iconify/icons-ls/mail";
 import telephoneIcon from "@iconify/icons-foundation/telephone";
@@ -9,9 +9,9 @@ import "./Fotter.css";
 export default function Fotter() {
   return (
     <footer>
-      <div className="footer-contact container">
-        <ul>
-          <li>
+      <div className="footer container">
+        <ul className="footer__list">
+          <li className="footer__item">
             <Icon
               className="icon-footer"
               icon={telephoneIcon}
@@ -19,7 +19,7 @@ export default function Fotter() {
             />
             <a href="tel:888 888 888">888 888 888</a>
           </li>
-          <li>
+          <li className="footer__item">
             <Icon
               className="icon-footer"
               icon={mailIcon}
@@ -29,7 +29,7 @@ export default function Fotter() {
               instalacje@hydro-krak.pl
             </a>
           </li>
-          <li>
+          <li className="footer__item">
             <Icon
               className="icon-footer"
               icon={bxlFacebookCircle}
@@ -39,7 +39,7 @@ export default function Fotter() {
           </li>
         </ul>
       </div>
-      <div className="copyright">
+      <div className="footer__copyright">
         <span>© 2020 HydroKrak</span>
       </div>
     </footer>

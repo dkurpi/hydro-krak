@@ -78,10 +78,10 @@ export default function Realizations(props) {
 
   return (
     <Element name="realizations">
-      <div className="real container realization">
+      <div className="realization container">
         <div data-aos="fade-right" className="realization__text">
-          <h2>NASZE REALIZACJE</h2>
-          <p>
+          <h2 className="realization__text-main">NASZE REALIZACJE</h2>
+          <p className="realization__text-paragraph">
             Szeroki zakres wiedzy oraz wieloletnie doświadczenie w branży
             zajmującej się montażem instalacji sanitarnych, gwarantujemy
             najwyższą jakość wykonywanych usług dla klienta. Niezależnie od

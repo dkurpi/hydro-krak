@@ -4,12 +4,12 @@
   color: white;
 }
 
-.job h3 {
+.job__text-main {
   font-size: 2.2em;
   margin: 0;
 }
 
-.job .button {
+.job__button {
   font-family: montserrat;
   background-color: transparent;
   color: white;
@@ -32,12 +32,12 @@
   cursor: pointer;
 }
 
-.job .button:hover {
+.job__button:hover {
   background-color: #fff;
   color: #3a3a3a;
 }
 
-.map-section__map {
+.map__google {
   height: 50vh;
   width: 100vw;
 }
@@ -53,7 +53,7 @@
   text-align: center;
 }
 
-.contacts .contacts-form {
+.contacts__form {
   margin: 2em 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,8 +64,8 @@
           flex-direction: column;
 }
 
-.contacts .contacts-form input,
-.contacts .contacts-form textarea {
+.contacts__form input,
+.contacts__form textarea {
   padding: 1.1em 1.5em;
   font-family: montserrat;
   border: 0;
@@ -74,12 +74,12 @@
   border-radius: 0.5em;
 }
 
-.contacts .contacts-form input:focus,
-.contacts .contacts-form textarea:focus {
+.contacts__form input:focus,
+.contacts__form textarea:focus {
   color: black;
 }
 
-.contacts .contacts-form .button {
+.contacts__form-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -92,7 +92,7 @@
           align-items: center;
 }
 
-.contacts .contacts-info {
+.contacts__info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -106,31 +106,31 @@
   margin-bottom: 2em;
 }
 
-.contacts .contacts-info h1 {
+.contacts__info h1 {
   font-size: 2em;
 }
 
-.contacts .contacts-info h1 span {
+.contacts__info h1 span {
   font-weight: 400;
   color: #028fcc;
 }
 
-.contacts .contacts-info h1,
-.contacts .contacts-info h2 {
+.contacts__info h1,
+.contacts__info h2 {
   margin: 0.2em 0;
 }
 
-.contacts .contacts-info h2:after {
+.contacts__info h2:after {
   display: none;
 }
 
-.contacts .contacts-info .destination {
+.contacts__info .destination {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.contacts .contacts-info .info2 {
+.contacts__info .info2 {
   text-align: left;
   padding: 1em 0;
   line-height: 1.4em;
@@ -144,17 +144,17 @@
     max-width: 800px;
     margin: 0 auto !important;
   }
-  .job .container p {
+  .job__text-paragraph {
     margin-left: 0;
     padding-right: 3em;
   }
-  .job .container .button {
+  .job__button {
     font-size: 1em;
     font-weight: 00;
     margin-top: 0.8em;
     padding: 15px 15px;
   }
-  .map-section__map {
+  .map__google {
     height: 70vh;
     width: 100vw;
   }
@@ -169,8 +169,7 @@
         grid-template-columns: repeat(2, 1fr);
     margin: 2em auto 4em !important;
   }
-  .contacts .contacts-info,
-  .contacts .contacts-form {
+  .contacts__info, .contacts__form {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;

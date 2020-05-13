@@ -1,4 +1,5 @@
-.fixedMenu {
+.scrollMenu {
+  $self: &;
   display: none;
   color: rgb(44, 44, 44);
   font-weight: 500;
@@ -9,7 +10,7 @@
   z-index: 1;
   transition: 0.5s;
 
-  .dot {
+  &__dot {
     cursor: pointer;
     height: 8px;
     width: 8px;
@@ -18,19 +19,19 @@
     background-color: rgb(212, 212, 212);
     transition: 0.2s;
 
-    &.dot--small {
+    &--small {
       transform: scale(0.7) !important;
       border-radius: 5px !important;
     }
   }
 
-  .active {
-    .dot {
+  &--active {
+    #{ $self }__dot {
       background-color: #028fcc;
       border: none;
 
       transform: scale(1.6);
-      &.dot--small {
+      &--small {
         background-color: #028fcc;
 
         transform: scale(0.7) !important;
@@ -40,13 +41,12 @@
 }
 
 @media (min-width: 800px) {
-  .fixedMenu {
+  .scrollMenu {
     display: block;
-
     left: 20px;
     margin: 10px;
 
-    .dot {
+    &__dot {
       height: 12px;
       width: 12px;
     }

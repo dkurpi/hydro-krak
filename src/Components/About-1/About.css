@@ -9,47 +9,16 @@
           flex-direction: column;
 }
 
-.about .about__text {
+.about__text {
   padding: 1.5em;
   margin-bottom: 1em;
 }
 
-.about .about__img {
+.about__img {
   background-image: url("/images/company.jpg");
   background-size: cover;
   height: 40vh;
   width: 100vw;
-}
-
-.about .numbers {
-  color: #f4f4f4;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  padding: 0 2em;
-  background-color: #028fcc;
-}
-
-.about .numbers ul {
-  max-width: 1200px;
-  list-style: none;
-  padding: 1.7em 0;
-  margin: 0 auto;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (minmax(150px, 2fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
-}
-
-.about .numbers ul li {
-  margin: 1em 0;
-}
-
-.about .numbers ul li strong {
-  font-size: 1.4em;
-}
-
-.about .numbers ul li span {
-  display: block;
 }
 
 .numbers {
@@ -60,7 +29,7 @@
   background-color: #028fcc;
 }
 
-.numbers ul {
+.numbers__list {
   max-width: 1200px;
   list-style: none;
   padding: 1.7em 0;
@@ -71,15 +40,15 @@
       grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
 }
 
-.numbers ul li {
+.numbers__list .numbers__item {
   margin: 1em 0;
 }
 
-.numbers ul li strong {
+.numbers__list .numbers__item-number {
   font-size: 2.5em;
 }
 
-.numbers ul li span {
+.numbers__list .numbers__item-description {
   display: block;
 }
 
@@ -95,7 +64,7 @@
     -ms-grid-columns: (50%)[2];
         grid-template-columns: repeat(2, 50%);
   }
-  .about .about__text {
+  .about__text {
     padding-top: 4em !important;
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -103,21 +72,21 @@
     margin-bottom: 1em;
     margin-left: 30% !important;
   }
-  .about .about__text p {
+  .about__paragraph {
     text-align: left;
   }
-  .about .about__img {
+  .about__img {
     height: 100%;
     background-attachment: fixed;
     background-position: 25% 60%;
   }
-  .numbers ul {
+  .numbers__list {
     padding-left: 12em;
   }
-  .numbers li {
+  .numbers .numbers__item {
     position: relative;
   }
-  .numbers li::before {
+  .numbers .numbers__item::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -127,7 +96,7 @@
     bottom: 0;
     background-color: #ebebeb;
   }
-  .numbers li:nth-last-child(1)::before {
+  .numbers__item:nth-last-child(1)::before {
     display: none;
   }
 }

@@ -36,10 +36,11 @@ export default function Gallery(props) {
 
   return (
     <Element name="realizations">
-      <div className="real  realization">
-        <div data-aos="fade-right" className="realization__text">
+      <div className="menubgc"></div>
+      <div className="gallery">
+        <div data-aos="fade-right" className="gallery__text">
           <h2>NASZE REALIZACJE</h2>
-          <p>
+          <p className="gallery__text-paragraph">
             Szeroki zakres wiedzy oraz wieloletnie doświadczenie w branży
             zajmującej się montażem instalacji sanitarnych, gwarantujemy
             najwyższą jakość wykonywanych usług dla klienta. Niezależnie od
@@ -50,7 +51,7 @@ export default function Gallery(props) {
             and make changes to the font.
           </p>
         </div>
-        <div className="gallery">
+        <div className="gallery__grid">
           <LightgalleryProvider>{cards}</LightgalleryProvider>
         </div>
       </div>

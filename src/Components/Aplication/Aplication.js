@@ -59,8 +59,10 @@ export default class Contact extends Component {
     return (
       <>
         <Element name="aplication">
+            <div className="menubgc"></div>
+
           <section className="aplication">
-            <div data-aos="fade-right" className="about__text">
+            <div data-aos="fade-right" className="aplication__text">
               <h2>SZUKASZ PRACY?</h2>
               <h4>Naszym pracownikom oferujemy:</h4>
               <ul>
@@ -84,7 +86,7 @@ export default class Contact extends Component {
                 <li>umiejętność pracya w zespole</li>
                 <li>dbałość o powierzony sprzęt</li>
               </ul>
-              <div className="contacts-form">
+              <div className="aplication__form">
                 <h2>ZAAPLIKUJ!</h2>
                 <input
                   onChange={(e) => {
@@ -130,13 +132,13 @@ export default class Contact extends Component {
                 <p style={{ fontSize: "12px", alignSelf: "start" }}>
                   * - pola wymagane
                 </p>
-                <div onClick={() => console.log("click")} className="button">
+                <div onClick={() => console.log("click")} className="aplication__button">
                   <ButtonUI handleSend={this.handleBtn} />
                 </div>
               </div>
             </div>
 
-            <div className="about__img"></div>
+            <div className="aplication__img"></div>
           </section>
         </Element>
       </>
