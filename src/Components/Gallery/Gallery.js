@@ -1,11 +1,10 @@
 import React from "react";
 import "./Gallery.css";
-import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
 import "lightgallery.js/dist/css/lightgallery.css";
+import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
 import { Element } from "react-scroll";
-import { Link as LinkRouter } from "react-router-dom";
 
-export default function Gallery(props) {
+export default function Gallery() {
   const images = [
     "/images/card1.jpg",
     "/images/card2.jpg",

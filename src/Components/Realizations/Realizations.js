@@ -4,8 +4,9 @@ import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
 import "lightgallery.js/dist/css/lightgallery.css";
 import { Element } from "react-scroll";
 import { Link as LinkRouter } from "react-router-dom";
+import { scrollToTop } from "../../Utils/Scroll&Animations";
 
-export default function Realizations(props) {
+export default function Realizations() {
   const cardsObj = [
     {
       images: [
@@ -66,7 +67,7 @@ export default function Realizations(props) {
           <h4>Text {idx + 1}</h4>
           <p>{card.text}</p>
           <LinkRouter
-            onClick={() => setTimeout(() => props.scrollToTop(), 100)}
+            onClick={() => setTimeout(() => scrollToTop(), 100)}
             to="/galeria"
           >
             <p style={{ fontWeight: "500" }}>Zobacz więcej</p>

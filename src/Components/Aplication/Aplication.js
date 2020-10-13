@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import "./Aplication.css";
-
 import emailjs from "emailjs-com";
-import ButtonUI from "../Contact-1(Map+Email)/Button.js";
-import { Icon } from "@iconify/react";
+import ButtonUI from "../Contact/Button.js";
 import { Element } from "react-scroll";
 
+import URI from "../../Utils/URI.JS";
 export default class Contact extends Component {
   state = {
     name: "",
@@ -24,12 +23,9 @@ export default class Contact extends Component {
   handleBtn = async (getAns) => {
     const { name, surname, tel, email, message } = this.state;
 
-    console.log(this.state);
-    ////////////Walidacja///////////
     if (!name || !surname || !tel || !email || !message)
       return getAns("Wypełnij wszystkie pola");
 
-    ////////////
     var template_params = {
       name,
       surname,
@@ -38,9 +34,9 @@ export default class Contact extends Component {
       message,
     };
 
-    var service_id = "hydrokrak.";
-    var template_id = "template_70umiDnS";
-    var user_id = "user_WR3uUjM2yeeQRA2T2ViR5";
+    var service_id = URI.SERVICE_ID;
+    var template_id = URI.TEMPLATE_ID;
+    var user_id = URI.USER_ID;
     emailjs.send(service_id, template_id, template_params, user_id).then(
       (result) => {
         getAns(result.text);
@@ -59,7 +55,7 @@ export default class Contact extends Component {
     return (
       <>
         <Element name="aplication">
-            <div className="menubgc"></div>
+          <div className="menubgc"></div>
 
           <section className="aplication">
             <div data-aos="fade-right" className="aplication__text">
@@ -132,7 +128,10 @@ export default class Contact extends Component {
                 <p style={{ fontSize: "12px", alignSelf: "start" }}>
                   * - pola wymagane
                 </p>
-                <div onClick={() => console.log("click")} className="aplication__button">
+                <div
+                  onClick={() => console.log("click")}
+                  className="aplication__button"
+                >
                   <ButtonUI handleSend={this.handleBtn} />
                 </div>
               </div>

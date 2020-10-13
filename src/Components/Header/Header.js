@@ -1,5 +1,5 @@
 import React from "react";
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import arrowDownAlt2 from "@iconify/icons-dashicons/arrow-down-alt2";
 import "./Header.css";
 import { Element } from "react-scroll";
@@ -24,7 +24,7 @@ export default function Header(props) {
             spy={true}
             smooth={true}
             duration={500}
-            offset={-props.vh * 0.1}
+            offset={-window.innerHeight * 0.1}
           >
             <div class="header__text-button">ZOBACZ WIĘCEJ</div>
           </Link>

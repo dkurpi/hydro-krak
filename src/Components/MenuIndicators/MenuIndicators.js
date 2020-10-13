@@ -3,7 +3,7 @@ import "./MenuIndicators.css";
 
 import { Link } from "react-scroll";
 
-export default function MenuIndicators(props) {
+export default function MenuIndicators() {
   const wrapper = useRef(null);
   useEffect(() => {
     if (!wrapper.current) return;
@@ -21,7 +21,7 @@ export default function MenuIndicators(props) {
       : (wrapper.current.style.opacity = "0");
   };
 
-  const offset = Math.floor(-props.vh * 0.2);
+  const offset = Math.floor(-window.innerHeight * 0.2);
 
   return (
     <div ref={wrapper} className="scrollMenu">
@@ -86,7 +86,6 @@ export default function MenuIndicators(props) {
       >
         <div className="scrollMenu__dot"></div>
       </Link>
-      {/* <li onClick={props.scrollToTop}>top</li> */}
     </div>
   );
 }

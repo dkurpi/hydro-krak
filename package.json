@@ -12,6 +12,7 @@
     "animate.css": "^3.7.2",
     "aos": "^2.3.4",
     "clsx": "^1.1.0",
+    "dotenv": "^8.2.0",
     "emailjs": "^2.2.0",
     "emailjs-com": "^2.4.1",
     "gsap": "^3.2.6",

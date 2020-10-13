@@ -3,8 +3,9 @@ import "./Menu.css";
 import { Link as LinkRouter } from "react-router-dom";
 import HamburgerMenu from "react-hamburger-menu";
 import gsap from "gsap";
+import { scrollTo, scrollToTop } from "../../Utils/Scroll&Animations";
 
-export default function Menu(props) {
+export default function Menu() {
   const [isOpen, setIsOpen] = useState(false);
   const [isClicked, setiIsClicked] = useState(false);
   const mobileNav = useRef(null);
@@ -20,19 +21,25 @@ export default function Menu(props) {
     }
   };
 
+  const handleNavigation = (destination) =>
+    destination === "top"
+      ? scrollToTop()
+      : setTimeout(() => scrollTo(destination), 100);
+
   return (
     <nav className="navigation">
       <div className="navigation__logo">
-        <LinkRouter
-          to="/"
-          onClick={() => setTimeout(() => props.scrollToTop(), 100)}
-        >
+        <LinkRouter to="/" onClick={() => handleNavigation("top")}>
           <h1 className="navigation__logo-main">
             <span className="navigation__logo-secondary">HYDRO</span>KRAK
           </h1>
         </LinkRouter>
       </div>
-      <div className={`navigation__options ${isOpen ? "navigation__options--active" : ""}`}>
+      <div
+        className={`navigation__options ${
+          isOpen ? "navigation__options--active" : ""
+        }`}
+      >
         <ul className="navigation__list" ref={mobileNav}>
           <li
             className="navigation__list-item"
@@ -40,10 +47,7 @@ export default function Menu(props) {
               setIsOpen((prev) => !prev);
             }}
           >
-            <LinkRouter
-              onClick={() => setTimeout(() => props.scrollTo("header"), 100)}
-              to="/"
-            >
+            <LinkRouter onClick={() => handleNavigation("header")} to="/">
               Home
             </LinkRouter>
           </li>
@@ -53,10 +57,7 @@ export default function Menu(props) {
               setIsOpen((prev) => !prev);
             }}
           >
-            <LinkRouter
-              onClick={() => setTimeout(() => props.scrollTo("about"), 100)}
-              to="/"
-            >
+            <LinkRouter onClick={() => handleNavigation("about")} to="/">
               O nas
             </LinkRouter>
           </li>
@@ -66,10 +67,7 @@ export default function Menu(props) {
               setIsOpen((prev) => !prev);
             }}
           >
-            <LinkRouter
-              onClick={() => setTimeout(() => props.scrollToTop(), 100)}
-              to="/galeria"
-            >
+            <LinkRouter onClick={() => handleNavigation("top")} to="/galeria">
               Galeria
             </LinkRouter>
           </li>
@@ -79,10 +77,7 @@ export default function Menu(props) {
               setIsOpen((prev) => !prev);
             }}
           >
-            <LinkRouter
-              onClick={() => setTimeout(() => props.scrollToTop(), 100)}
-              to="/aplikuj"
-            >
+            <LinkRouter onClick={() => handleNavigation("top")} to="/aplikuj">
               Aplikuj
             </LinkRouter>
           </li>
@@ -92,10 +87,7 @@ export default function Menu(props) {
               setIsOpen((prev) => !prev);
             }}
           >
-            <LinkRouter
-              onClick={() => setTimeout(() => props.scrollTo("contact"), 100)}
-              to="/"
-            >
+            <LinkRouter onClick={() => handleNavigation("contact")} to="/">
               Kontakt
             </LinkRouter>
           </li>
@@ -105,10 +97,7 @@ export default function Menu(props) {
               setIsOpen((prev) => !prev);
             }}
           >
-            <LinkRouter
-              onClick={() => setTimeout(() => props.scrollToTop(), 100)}
-              to="/zamow"
-            >
+            <LinkRouter onClick={() => handleNavigation("top")} to="/zamow">
               Zamów
             </LinkRouter>
           </li>
