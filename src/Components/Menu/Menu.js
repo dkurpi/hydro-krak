@@ -97,7 +97,7 @@ export default function Menu() {
               setIsOpen((prev) => !prev);
             }}
           >
-            <LinkRouter onClick={() => handleNavigation("top")} to="/zamow">
+            <LinkRouter onClick={() => handleNavigation("contact")} to="/">
               Zamów
             </LinkRouter>
           </li>

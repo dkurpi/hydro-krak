@@ -57,5 +57,9 @@
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
+  .realization .card:hover {
+    -webkit-transform: translateY(15px);
+            transform: translateY(15px);
+  }
 }
 /*# sourceMappingURL=Realizations.css.map */

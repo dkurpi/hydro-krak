@@ -1,16 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./OfferRellax.css";
 import { Element } from "react-scroll";
-import Rellax from "rellax";
 
 import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
 import "lightgallery.js/dist/css/lightgallery.css";
 
 export default function OfferRellax(props) {
-  useEffect(() => {
-    var rellax = new Rellax(".rellax");
-  }, []);
-
   return (
     <Element name="offer">
       <section className="offer container">
@@ -33,8 +28,8 @@ export default function OfferRellax(props) {
                 <img src="/images/parralax1.jpg" alt="" />
               </div>
             </LightgalleryItem>
-            <LightgalleryItem group={`item`} src="/images/parralax2.png"/>
-            <LightgalleryItem group={`item`} src="/images/parralax3.jpg"/>
+            <LightgalleryItem group={`item`} src="/images/parralax2.png" />
+            <LightgalleryItem group={`item`} src="/images/parralax3.jpg" />
 
             <div className="offer__card-text rellax" data-rellax-speed="3">
               <h2>PRODUKT 1</h2>

@@ -39,5 +39,10 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
     }
+    .card {
+      &:hover {
+        transform: translateY(15px);
+      }
+    }
   }
 }

@@ -4,24 +4,15 @@ import "lightgallery.js/dist/css/lightgallery.css";
 import { LightgalleryProvider, LightgalleryItem } from "react-lightgallery";
 import { Element } from "react-scroll";
 
+function importAll(r) {
+  return r.keys().map(r);
+}
+
 export default function Gallery() {
-  const images = [
-    "/images/card1.jpg",
-    "/images/card2.jpg",
-    "/images/card3.jpg",
-    "/images/card1.jpg",
-    "/images/card1.jpg",
-    "/images/card2.jpg",
-    "/images/card3.jpg",
-    "/images/card1.jpg",
-    "/images/card1.jpg",
-    "/images/card2.jpg",
-    "/images/card3.jpg",
-    "/images/card1.jpg",
-    "/images/card2.jpg",
-    "/images/card3.jpg",
-    "/images/card1.jpg",
-  ];
+  const images = importAll(
+    require.context("../../uploads", false, /\.(png|jpe?g|svg)$/)
+  );
+  console.log(images);
 
   const cards = images.map((img, idx) => {
     return (
@@ -44,10 +35,7 @@ export default function Gallery() {
             zajmującej się montażem instalacji sanitarnych, gwarantujemy
             najwyższą jakość wykonywanych usług dla klienta. Niezależnie od
             rodzaju zlecenia mogą Państwo liczyć na pełen profesjonalizm,
-            dyspozycyjność i pełne ukierunkowanie na potrzeby klienta. I'm a
-            paragraph. Click here to add your own text and edit me. It’s easy.
-            Just click “Edit Text” or double click me to add your own content
-            and make changes to the font.
+            dyspozycyjność i pełne ukierunkowanie na potrzeby klienta.
           </p>
         </div>
         <div className="gallery__grid">

@@ -50,10 +50,19 @@ h2:after {
           flex-direction: column;
   background-color: #f4f4f4;
   margin: 1em 0;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
 }
 
 .card__img {
+  height: 350px;
+  cursor: pointer;
+}
+
+.card__img-wrapper {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .card__text {

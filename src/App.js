@@ -13,7 +13,6 @@ import Partners from "./Components/Partners/Partners";
 import Contact from "./Components/Contact/Contact";
 import Footer from "./Components/Footer/Footer";
 import Gallery from "./Components/Gallery/Gallery";
-import Order from "./Components/Order/Order";
 import { SemipolarLoading } from "react-loadingg";
 
 import {
@@ -55,7 +54,6 @@ class App extends Component {
             <Contact />
           </Route>
           <Route exact path="/aplikuj" render={() => <Job />} />
-          <Route exact path="/zamow" render={Order} />
           <Route exact path="/galeria" render={Gallery} />
         </Switch>
         <Footer />

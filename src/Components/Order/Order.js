@@ -8,42 +8,19 @@ import { Link as LinkRouter } from "react-router-dom";
 export default function Order(props) {
   const cardsObj = [
     {
-      images: [
-        "/images/card1.jpg",
-        "/images/card2.jpg",
-        "/images/card3.jpg",
-        "/images/card1.jpg",
-      ],
-      title: "Urządzonko 1",
-      text: `I'm a paragraph. Click here to add your own text and edit me. It’s
-      easy. Just click “Edit Text” or double click me to add your own
-      content and make changes to the font.`,
+      images: ["/images/kociol.jpg"],
+      title: "Kotły gazowe",
+      text: `Współpracujemy z najlepszymi producentami z branży automatyki i techniki cieplnej, oferując kotły gazowe, grzejniki i palniki gazowe najwyższej jakości.`,
     },
     {
-      images: [
-        "/images/card2.jpg",
-        "/images/card1.jpg",
-        "/images/card3.jpg",
-        "/images/card2.jpg",
-      ],
-      title: "Urządzonko 2",
-
-      text: `I'm a paragraph. Click here to add your own text and edit me. It’s
-      easy. Just click “Edit Text” or double click me to add your own
-      content and make changes to the font.`,
+      images: ["/images/kociol.jpg"],
+      title: "Kotły gazowe",
+      text: `Współpracujemy z najlepszymi producentami z branży automatyki i techniki cieplnej, oferując kotły gazowe, grzejniki i palniki gazowe najwyższej jakości.`,
     },
     {
-      images: [
-        "/images/card3.jpg",
-        "/images/card1.jpg",
-        "/images/card2.jpg",
-        "/images/card3.jpg",
-      ],
-      title: "Urządzonko 3",
-
-      text: `I'm a paragraph. Click here to add your own text and edit me. It’s
-      easy. Just click “Edit Text” or double click me to add your own
-      content and make changes to the font.`,
+      images: ["/images/kociol.jpg"],
+      title: "Kotły gazowe",
+      text: `Współpracujemy z najlepszymi producentami z branży automatyki i techniki cieplnej, oferując kotły gazowe, grzejniki i palniki gazowe najwyższej jakości.`,
     },
   ];
   const cards = cardsObj.map((card, idx) => {
@@ -62,7 +39,7 @@ export default function Order(props) {
             </div>
           </LightgalleryItem>
           {card.images.map((img, idx) => {
-            if (idx === 0) return;
+            if (idx === 0) return null;
             return <LightgalleryItem group={`item`} src={img} />;
           })}
         </LightgalleryProvider>
