@@ -3,7 +3,6 @@ import { Icon } from "@iconify/react";
 import bxlFacebookCircle from "@iconify/icons-bx/bxl-facebook-circle";
 import mailIcon from "@iconify/icons-ls/mail";
 import telephoneIcon from "@iconify/icons-foundation/telephone";
-
 import "./Fotter.css";
 
 export default function Fotter() {
