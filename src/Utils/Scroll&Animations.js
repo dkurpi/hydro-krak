@@ -36,25 +36,36 @@ const handleMenuScrolling = () => {
 };
 
 const loadCallbackAnimation = () => {
-  setTimeout(() => {
-    console.log("eee");
-    if (!document.querySelector(".header__text")) return;
-    const header = document.querySelector(".header__text").childNodes;
-    const tl = gsap.timeline({
-      defaults: { ease: "power3.inOut", opacity: 0 },
+  const header = document.querySelector(".header__text").childNodes;
+  const tl = gsap.timeline();
+
+  tl.to(".loader", 2, {
+    opacity: 0,
+    ease: "power4.inOut",
+  })
+    .to(".loading-screen", 2, {
+      ease: "power4.out",
+      backgroundColor: "#eee",
+      delay: -2,
+    })
+    .to(".loading-screen", 2, {
+      left: "100vw",
+      ease: "expo.out",
+    })
+
+    .from(".header", 3, {
+      opacity: 0,
+      delay: -2,
+      ease: "expo.out",
+    })
+    .from(header, 1, {
+      y: 100,
+      stagger: 0.1,
+      delay: -1,
+
+      opacity: 0,
+      ease: "power4.inOut",
     });
-    tl.from(
-      header,
-      1,
-      {
-        y: 40,
-        opacity: 0,
-        stagger: 0.1,
-        delay: 0.2,
-      },
-      "+=1"
-    );
-  }, 1000);
 };
 
 function scrollToTop() {

@@ -26,12 +26,12 @@ class App extends Component {
   state = { isLoaded: false };
 
   componentDidMount() {
-    configureAnimationSettings();
-    configureScrollSettings();
-    setTimeout(() => {
-      this.setState({ isLoaded: true });
-    }, 1000);
-    loadCallbackAnimation();
+    window.addEventListener("load", () => {
+      // this.setState({ isLoaded: true });
+      configureAnimationSettings();
+      configureScrollSettings();
+      loadCallbackAnimation();
+    });
   }
 
   componentWillUnmount() {
@@ -39,9 +39,15 @@ class App extends Component {
   }
 
   render() {
-    if (!this.state.isLoaded) return <SemipolarLoading color="#028fcc" />;
     return (
       <Router>
+        {!this.state.isLoaded && (
+          <div className="loading-screen">
+            <div className="loader">
+              <SemipolarLoading color="#028fcc" />
+            </div>
+          </div>
+        )}
         <Menu />
         <Switch>
           <Route exact path="/">
