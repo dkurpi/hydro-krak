@@ -27,10 +27,11 @@ class App extends Component {
 
   componentDidMount() {
     window.addEventListener("load", () => {
-      // this.setState({ isLoaded: true });
       configureAnimationSettings();
       configureScrollSettings();
-      loadCallbackAnimation();
+      loadCallbackAnimation(() => {
+        this.setState({ isLoaded: true });
+      });
     });
   }
 

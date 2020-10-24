@@ -35,7 +35,7 @@ const handleMenuScrolling = () => {
   } else navbar.classList.remove("navigation--fixed");
 };
 
-const loadCallbackAnimation = () => {
+const loadCallbackAnimation = (callback) => {
   const header = document.querySelector(".header__text").childNodes;
   const tl = gsap.timeline();
 
@@ -49,7 +49,7 @@ const loadCallbackAnimation = () => {
       delay: -2,
     })
     .to(".loading-screen", 2, {
-      left: "100vw",
+      width: "0",
       ease: "expo.out",
     })
 
@@ -57,6 +57,7 @@ const loadCallbackAnimation = () => {
       opacity: 0,
       delay: -2,
       ease: "expo.out",
+      onComplete: callback,
     })
     .from(header, 1, {
       y: 100,

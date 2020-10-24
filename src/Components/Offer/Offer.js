@@ -6,7 +6,9 @@ export default function Offer(props) {
   const cards = (
     <div className="offer__cards">
       <div data-aos="fade-up" className="card">
-        <img className="card__img" src="/images/card1.jpg" alt="" />
+        <div className="card__img-wrapper">
+          <img className="card__img" src="/images/card1.jpg" alt="" />
+        </div>
         <div className="card__text">
           <h4 className="card__text-main">Montaż instalacji</h4>
           <ul className="card__list">

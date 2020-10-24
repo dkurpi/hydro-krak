@@ -38,12 +38,15 @@ h2 {
   margin: 1em 0;
   transition: 0.1s;
 
- 
   &__img {
-    height: 350px;
     cursor: pointer;
+    width: 100%;
+    height: 320px;
+    transition: .2s;
+    &:hover {
+      transform: scale(.99);
+    }
     &-wrapper {
-      width: 100%;
       object-fit: cover;
     }
   }
@@ -137,7 +140,7 @@ h2 {
     }
 
     &__text {
-      padding: 0.2em 2em 1em;
+      padding: 0.2em 2em 1.4em;
       &-main {
         margin: 1em 1em 0.5em 0.5em;
         font-size: 1.05em;

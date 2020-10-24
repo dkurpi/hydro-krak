@@ -54,14 +54,28 @@ export default function Realizations() {
             return <LightgalleryItem group={`item`} src={img} />;
           })}
         </LightgalleryProvider>
-        <div className="card__text">
+        <div
+          className="card__text"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            flexBasis: "100%",
+          }}
+        >
           <h4 className="card__text-main">{card.title}</h4>
           <p>{card.text}</p>
           <LinkRouter
             onClick={() => setTimeout(() => scrollToTop(), 100)}
             to="/galeria"
+            style={{
+              fontWeight: "500",
+              textAlign: "right",
+              marginTop: "auto",
+              marginBottom: 0,
+              ali: "flex-end",
+            }}
           >
-            <p style={{ fontWeight: "500" }}>Zobacz więcej</p>
+            <p>Zobacz więcej</p>
           </LinkRouter>
         </div>
       </div>
