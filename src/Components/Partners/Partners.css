@@ -20,6 +20,7 @@
           filter: grayscale(100%);
   max-width: 100%;
   margin: 0.4em;
+  width: 40%;
 }
 
 .partners__img:hover {
@@ -27,15 +28,21 @@
           filter: grayscale(0%);
 }
 
+.partners img {
+  width: 100%;
+  height: 100%;
+}
+
 @media (min-width: 800px) {
   .partners {
     text-align: center;
   }
   .partners__logos {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
   .partners__img {
     -ms-flex-item-align: center;
@@ -45,12 +52,13 @@
         justify-self: center;
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
-    max-width: 100%;
+    width: 10%;
     margin: 0.4em;
   }
   .partners__img:hover {
     -webkit-filter: grayscale(0%);
             filter: grayscale(0%);
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=Partners.css.map */

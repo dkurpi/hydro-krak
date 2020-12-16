@@ -6,7 +6,7 @@ import locationPin from "@iconify/icons-entypo/location-pin";
 import "./Contact.css";
 import { Link as LinkRouter } from "react-router-dom";
 import { Element } from "react-scroll";
-
+import { scrollToTop } from "../../Utils/Scroll&Animations";
 export default class Contact extends Component {
   state = {
     name: "",
@@ -68,7 +68,7 @@ export default class Contact extends Component {
               </p>
             </div>
             <LinkRouter
-              onClick={() => setTimeout(() => this.props.scrollToTop(), 100)}
+              onClick={() => setTimeout(() => scrollToTop(), 100)}
               to="/aplikuj"
             >
               <a className="job__button" href="#">
@@ -77,72 +77,73 @@ export default class Contact extends Component {
             </LinkRouter>
           </div>
         </div>
-        <Element name="contact">
-          <div className="map">
-            <iframe
-              className="google-map map__google"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.8624299081425!2d20.03673031571763!3d50.07013797942464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716451a9e3db903%3A0xc49aafa53df7e897!2sOsiedle%20Centrum%20E%2016%2C%2031-934%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1588021806425!5m2!1spl!2spl"
-              frameborder="0"
-              style={{ border: 0 }}
-              allowfullscreen=""
-              aria-hidden="false"
-              tabindex="0"
-            ></iframe>
-          </div>
-          <div className="contacts container">
-            <form className="contacts__form">
-              <h2>Darmowa wycena</h2>
-              <input
-                onChange={(e) => {
-                  this.handleChange(e, "name");
-                }}
-                value={name}
-                type="text"
-                placeholder="Imię*"
-              />
-              <input
-                onChange={(e) => {
-                  this.handleChange(e, "surname");
-                }}
-                value={surname}
-                type="text"
-                placeholder="Nazwisko*"
-              />
-              <input
-                onChange={(e) => {
-                  this.handleChange(e, "email");
-                }}
-                value={email}
-                type="text"
-                placeholder="Adres e-mail*"
-              />
-              <input
-                onChange={(e) => {
-                  this.handleChange(e, "tel");
-                }}
-                value={tel}
-                type="text"
-                placeholder="Numer Telefonu*"
-              />
-              <textarea
-                onChange={(e) => {
-                  this.handleChange(e, "message");
-                }}
-                value={message}
-                rows="4"
-                cols="50"
-                placeholder="Treść wiadomości"
-              />
-              <p style={{ fontSize: "12px", alignSelf: "start" }}>
-                * - pola wymagane
-              </p>
-              <div
-                onClick={() => console.log("click")}
-                className="contacts__form-button"
-              >
-                <ButtonUI handleSend={this.handleBtn} />
-              </div>
-            </form>
+
+        <div className="map">
+          <iframe
+            className="google-map map__google"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2560.8624299081425!2d20.03673031571763!3d50.07013797942464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716451a9e3db903%3A0xc49aafa53df7e897!2sOsiedle%20Centrum%20E%2016%2C%2031-934%20Krak%C3%B3w!5e0!3m2!1spl!2spl!4v1588021806425!5m2!1spl!2spl"
+            frameborder="0"
+            style={{ border: 0 }}
+            allowfullscreen=""
+            aria-hidden="false"
+            tabindex="0"
+          ></iframe>
+        </div>
+        <div className="contacts container">
+          <form className="contacts__form">
+            <h2>Darmowa wycena</h2>
+            <input
+              onChange={(e) => {
+                this.handleChange(e, "name");
+              }}
+              value={name}
+              type="text"
+              placeholder="Imię*"
+            />
+            <input
+              onChange={(e) => {
+                this.handleChange(e, "surname");
+              }}
+              value={surname}
+              type="text"
+              placeholder="Nazwisko*"
+            />
+            <input
+              onChange={(e) => {
+                this.handleChange(e, "email");
+              }}
+              value={email}
+              type="text"
+              placeholder="Adres e-mail*"
+            />
+            <input
+              onChange={(e) => {
+                this.handleChange(e, "tel");
+              }}
+              value={tel}
+              type="text"
+              placeholder="Numer Telefonu*"
+            />
+            <textarea
+              onChange={(e) => {
+                this.handleChange(e, "message");
+              }}
+              value={message}
+              rows="4"
+              cols="50"
+              placeholder="Treść wiadomości"
+            />
+            <p style={{ fontSize: "12px", alignSelf: "start" }}>
+              * - pola wymagane
+            </p>
+            <div
+              onClick={() => console.log("click")}
+              className="contacts__form-button"
+            >
+              <ButtonUI handleSend={this.handleBtn} />
+            </div>
+          </form>
+          <Element name="contact">
             <div className="contacts__info">
               <h1>
                 <span>HYDRO</span> KRAK
@@ -168,8 +169,8 @@ export default class Contact extends Component {
                 <span>367136666</span>
               </div>
             </div>
-          </div>
-        </Element>
+          </Element>
+        </div>
       </section>
     );
   }

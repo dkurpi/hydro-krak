@@ -36,7 +36,7 @@ const handleMenuScrolling = () => {
 };
 
 const loadCallbackAnimation = (callback) => {
-  const header = document.querySelector(".header__text").childNodes;
+  const header = document.querySelector(".header__text")?.childNodes;
   const tl = gsap.timeline();
 
   tl.to(".loader", 2, {

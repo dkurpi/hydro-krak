@@ -42,9 +42,9 @@ h2 {
     cursor: pointer;
     width: 100%;
     height: 320px;
-    transition: .2s;
+    transition: 0.2s;
     &:hover {
-      transform: scale(.99);
+      transform: scale(0.99);
     }
     &-wrapper {
       object-fit: cover;
@@ -118,8 +118,10 @@ h2 {
     }
     &__cards {
       font-size: 15px;
-      display: grid;
+      display: flex;
       grid-template-columns: repeat(3, 1fr);
+      flex-wrap: wrap;
+      justify-content: center;
     }
   }
 
@@ -130,7 +132,9 @@ h2 {
     background-color: #f4f4f4;
     box-shadow: 0 35px 35px -25px rgba(10, 10, 10, 0.1);
     margin: 1em 0.5em;
-
+    &--offer {
+      width: 32%;
+    }
     &__img {
       width: 100%;
 
@@ -144,6 +148,21 @@ h2 {
       &-main {
         margin: 1em 1em 0.5em 0.5em;
         font-size: 1.05em;
+        &--seemore {
+          text-align: center;
+          font-size: 24px;
+        }
+      }
+    }
+
+    &--seemore {
+      width: 100%;
+      height: 10vh;
+      flex-direction: row;
+      background-color: #fff;
+      .card__img {
+        height: 100%;
+        width: 33%;
       }
     }
 
@@ -169,6 +188,15 @@ h2 {
           background-color: #5e5e5e;
         }
       }
+    }
+  }
+
+  .job--offer {
+    margin-top: 5em;
+
+    .container {
+      max-width: 1200px !important;
+      justify-content: space-around;
     }
   }
 }

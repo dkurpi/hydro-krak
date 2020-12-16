@@ -1,0 +1,94 @@
+.offer-details {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.offer-details__main-text {
+  padding: auto 50px;
+  letter-spacing: 2px;
+}
+
+.offer-details__main-text::after {
+  top: 125%;
+  left: 15%;
+  height: 5px;
+}
+
+.offer-details__text {
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
+.offer-details__img {
+  background-image: url("/images/company.jpg");
+  background-size: cover;
+  height: 40vh;
+  width: 100vw;
+  background-position-x: 500px;
+}
+
+@media (min-width: 1200px) {
+  .offer-details {
+    max-width: 75vw;
+    margin: auto;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .offer-details__text {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    width: 50%;
+  }
+  .offer-details__text p {
+    text-align: left;
+  }
+  .offer-details__text.left {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    padding: 7vh 0%;
+  }
+  .offer-details__text.right {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding: 7vh 5%;
+  }
+  .offer-details__img {
+    width: 50%;
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
+    background-attachment: fixed;
+    background-position: 25% 60%;
+    height: auto;
+  }
+  .offer-details__img.left {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .offer-details__img.right {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+/*# sourceMappingURL=OfferDetails.css.map */

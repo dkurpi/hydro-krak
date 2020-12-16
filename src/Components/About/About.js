@@ -11,21 +11,43 @@ export default function About() {
           <div data-aos="fade-right" className="about__text">
             <h2>O FIRMIE</h2>
             <p className="about__paragraph">
-              Firma Hydrokrak zajmuję się montażem i serwisem instalacji
-              sanitarnych. Działamy zgodnie ze standardami jak i wymaganiami
-              klienta.
+              Firma Hydrokrak została założona w 2017 roku. Przede wszystkim
+              zajmujemy się montażem, serwisem i modernizacją instalacji
+              sanitarnych zarówno wewnętrznych jak i zewnętrznych. Serwis,
+              naprawa kotłów gazowych to dla nas nie problem. Ponadto świadczymy
+              usługi z zakresu cięcia i wiercenia w betonie. Wykonujemy
+              przewierty do średnicy 650mm. Stoimy frontem do klienta,
+              doradzamy, podpowiadamy oraz działamy zgodnie ze standardami jak i
+              wymaganiami od nas oczekiwanymi.
             </p>
             <p className="about__paragraph">
-              Doświadczona kadra zapewnia najwyższą jakość wykonywanych usług
-              dla klienta. Ofertę kierujemy zarówno do dużych firm budowlanych i
-              przemysłowych jak i osób prywatnych.
+              Prowadzimy również pogotowie hydrauliczne. Pilne awarie można
+              zgłaszać całą dobę 7 dni w tygodniu. Postaramy się zareagować jak
+              najszybciej!
             </p>
             <p className="about__paragraph">
-              Współpracujemy rownież ze znaną siecią fast-food, oraz z
-              współdzielniami mieszkaniowymi. Działamy glownie na terenach{" "}
-              <b>Krakowa</b> jak i w jego okolicach
+              Jesteśmy nastawieni nie tylko na współprace z dużymi firmami
+              budowlanymi , przemysłowymi czy inwestorami ale również na klienta
+              prywatnego.Gwarantujemy krótki czas realizacji i konkurencyjne
+              ceny z uwagi na długo wypracowywane rabaty wśród dostawców
+              materiałów.
             </p>
-            <p className="about__paragraph">Zapraszamy do zapoznania sie z ofertą firmy.</p>
+            <p className="about__paragraph">
+              Nasza doświadczona i starannie dobrana kadra zapewnia najwyższą
+              jakość wykonywanych usług. Pracujemy na najlepszych dostępnych
+              narzędziach, co stanowi gwarancję dobrze i szybko wykonanej pracy.
+              Stawiamy na ciągły rozwój !!
+            </p>
+            <p className="about__paragraph">
+              Niech Naszą reklamą będzie współpracaze spółdzielniami
+              mieszkaniowymi, gdzie m.in. likwidujemy piecyki gazowe i montujemy
+              centralną ciepłą wodę. Bierzemy czynny udział w poprawie jakości,
+              czystości powietrza w Krakowie i okolicach w ramach programu Stop
+              Smog, likwidując piece węglowe i zakładając kotły gazowe, układy
+              solarne czy pompy ciepła. Dogadujemy się również dobrze ze znaną
+              siecią fast food’ów i restauracji pomagając im w sytuacjach
+              wymagających natychmiastowej interwencji.
+            </p>
           </div>
 
           <div className="about__img"></div>
@@ -77,7 +99,7 @@ export default function About() {
               ata-aos-duration="200"
               data-aos-delay="900"
             >
-              <strong  className="numbers__item-number">1.5K+</strong>
+              <strong className="numbers__item-number">1.5K+</strong>
               <span className="numbers__item-description">
                 Zadowoloncyh <br />
                 klientów

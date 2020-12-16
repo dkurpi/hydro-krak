@@ -11,9 +11,14 @@
     filter: grayscale(100%);
     max-width: 100%;
     margin: 0.4em;
+    width: 40%;
     &:hover {
       filter: grayscale(0%);
     }
+  }
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -21,17 +26,18 @@
   .partners {
     text-align: center;
     &__logos {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      display: flex;
+      flex-wrap: nowrap;
     }
     &__img {
       align-self: center;
       justify-self: center;
       filter: grayscale(100%);
-      max-width: 100%;
+      width: 10%;
       margin: 0.4em;
       &:hover {
         filter: grayscale(0%);
+        cursor: pointer;
       }
     }
   }

@@ -12,7 +12,6 @@ export default function Gallery() {
   const images = importAll(
     require.context("../../uploads", false, /\.(png|jpe?g|svg)$/)
   );
-  console.log(images);
 
   const cards = images.map((img, idx) => {
     return (

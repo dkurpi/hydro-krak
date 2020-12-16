@@ -85,6 +85,13 @@
   left: 50%;
   -webkit-transform: translate(-50%);
           transform: translate(-50%);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header__icon:hover {
+  cursor: pointer;
+  color: black !important;
 }
 
 @media (min-width: 800px) {

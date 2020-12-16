@@ -16,12 +16,12 @@ export default function Realizations() {
         "/images/pod2.jpg",
         "/images/pod4.jpg",
       ],
-      text: `Lubisz przyjemne ciepło rozchodzące się po całym pomieszczeniu, a tradycyjny grzejnik nie spełnia Twoich oczekiwań? Rozwiązaniem dla Ciebie jest ogrzewanie podłogowe.`,
+      text: `Lubisz przyjemne ciepło rozchodzące się po całym pomieszczeniu, a tradycyjny grzejnik nie spełnia Twoich oczekiwań? Rozwiązaniem dla Ciebie jest ogrzewanie podłogowe, które jest dużo ekonomiczniejsze od tradycyjnego ogrzewania grzejnikowego.`,
     },
     {
       title: "Kotły gazowe",
       images: ["/images/kociol1.jpg", "/images/kociol2.jpg"],
-      text: `Montaż kotłów gazowych to tylko jedna z naszych usług. Świadczymy kompleksową pomoc w zakresie instalacji gazowych. Zajmujemy się konserwacją oraz serwisem kotłów gazowych.`,
+      text: `Czy warto wymienić kocioł na paliwo stałe na kocioł gazowy? Zdecydowanie tak! Nie dlatego, że kotły gazowe kondensacyjne są wygodniejsze w obsłudze, nie dlatego że są ekonomiczniejsze. Przede wszystkim dlatego, że  są mniej szkodliwe dla środowiska! `,
     },
     {
       title: "Instalacje hydrauliczne",
@@ -31,7 +31,7 @@ export default function Realizations() {
         "/images/inst3.jpg",
         "/images/inst4.jpg",
       ],
-      text: `Wykonujemy praktycznie wszelkie domowe instalacje: takie jak ogólne instalacje hydrauliczne, instalacje wodno-kanalizacyjne, centralnego ogrzewania Jako firma oferujemy modernizacje już istniejących instalacji, ich serwisowanie jak oraz wykonanie całkowicie nowych systemów.`,
+      text: `Wykonujemy praktycznie wszelkie instalacje wodno-kanalizacyjne, grzewcze i gazowe, zarówno nowe jak i modernizację już istniejących. Posiadamy sprzęt do praktycznie każdego dostępnego systemu na rynku, m.in. TE-CE, Rehał, Rems, Sanha, Geberit, Viega, Comap, itd.`,
     },
   ];
   const cards = cardsObj.map((card, idx) => {

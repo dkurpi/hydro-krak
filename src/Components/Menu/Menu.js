@@ -98,7 +98,7 @@ export default function Menu() {
             }}
           >
             <LinkRouter onClick={() => handleNavigation("contact")} to="/">
-              Zamów
+              Zamów darmową wycene
             </LinkRouter>
           </li>
         </ul>
